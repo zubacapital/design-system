@@ -54,16 +54,14 @@ own deliberate step rather than letting it drift silently.
 
 ## Consumption
 
-Add as a git dependency pinned to a released tag, e.g. in a consumer's
-`package.json`:
+This repo is public, so consumers pin to a released tag with the plain
+`github:` shorthand — no SSH key or credentials needed anywhere (local
+machine, CI, or a host like Render), since pnpm/npm fetch public GitHub
+repos as an anonymous tarball download:
 
 ```json
-"@zuba/design-system": "git+ssh://git@github.com/zubacapital/design-system.git#1.0.0"
+"@zuba/design-system": "github:zubacapital/design-system#1.0.0"
 ```
-
-(`github:org/repo#tag` resolves over HTTPS and needs interactive
-credentials in some environments; the explicit `git+ssh://` form uses the
-SSH key already set up for push access instead.)
 
 Then reference `node_modules/@zuba/design-system/dist/css/tokens.css` — in
 `www` this is copied into `src/public/css/tokens.css` by the `tokens:sync`
