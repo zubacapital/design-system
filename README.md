@@ -33,18 +33,37 @@ pnpm build   # style-dictionary build -> dist/css/tokens.css
 
 `dist/` is committed, not gitignored. This repo is consumed as a **git
 dependency** (no private npm registry yet), so there is no publish step to
-produce build output — anyone installing a given commit/tag needs the built
-CSS to already be in the tree. Whenever you change a token, run `pnpm build`
-and commit the resulting `dist/css/tokens.css` diff alongside it.
+produce build output — anyone installing a given tag needs the built CSS to
+already be in the tree. Whenever you change a token, run `pnpm build` and
+commit the resulting `dist/css/tokens.css` diff alongside it.
+
+## Versioning and releasing
+
+This package is versioned with semver (`package.json`'s `version`) and
+released as a git tag, the same convention `www` already uses for its own
+releases (bare version, no `v` prefix — see `www`'s `justfile release`
+recipe): bump `version`, commit, then `git tag <version>` and push the
+commit and the tag.
+
+**Every consumer pins to a released tag, not a branch or a raw commit SHA.**
+A tagged release is this repo's equivalent of a published npm version, so a
+specific `www` release should always record which design-system tag it was
+built against — when you cut a `www` release, check whether a newer
+design-system tag should be picked up first, and bump the dependency as its
+own deliberate step rather than letting it drift silently.
 
 ## Consumption
 
-Add as a git dependency pinned to an exact commit SHA (not a branch or a
-mutable tag), e.g. in a consumer's `package.json`:
+Add as a git dependency pinned to a released tag, e.g. in a consumer's
+`package.json`:
 
 ```json
-"@zuba/design-system": "github:zubacapital/design-system#<commit-sha>"
+"@zuba/design-system": "git+ssh://git@github.com/zubacapital/design-system.git#1.0.0"
 ```
+
+(`github:org/repo#tag` resolves over HTTPS and needs interactive
+credentials in some environments; the explicit `git+ssh://` form uses the
+SSH key already set up for push access instead.)
 
 Then reference `node_modules/@zuba/design-system/dist/css/tokens.css` — in
 `www` this is copied into `src/public/css/tokens.css` by the `tokens:sync`
