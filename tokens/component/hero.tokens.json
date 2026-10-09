@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "$description": "Home page hero: a translucent panel over the hero image.",
+    "panel": {
+      "background": { "$value": "{color.background.glass}" },
+      "radius": { "$value": "{radius.feature}" },
+      "padding": { "$value": "{space.inset.lg}" },
+      "gap": { "$value": "{space.gap.default}" },
+      "width": { "$value": "{size.464}" },
+      "typography": { "$value": "{typography.body.lg}" }
+    }
+  }
+}

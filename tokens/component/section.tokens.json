@@ -1,0 +1,31 @@
+{
+  "section": {
+    "$description": "Full-width page band (benefits, CTA, subscription).",
+    "padding-block": { "$value": "{space.section}" },
+    "padding-inline": { "$value": "{space.gutter.container}" },
+    "gap": {
+      "$value": "{space.gap.wide}",
+      "$description": "Between cards in the band's grid."
+    },
+    "max-width": { "$value": "{size.measure.wide}" },
+    "title": {
+      "typography": { "$value": "{typography.display}" },
+      "color": { "$value": "{color.text.subtle}" }
+    },
+    "body": {
+      "color": { "$value": "{color.text.subtle}" },
+      "max-width": { "$value": "{size.measure.text}" }
+    },
+    "actions": {
+      "max-width": { "$value": "{size.measure.narrow}" },
+      "gap": { "$value": "{space.gap.default}" }
+    },
+    "tinted": { "background": { "$value": "{color.background.subtle}" } },
+    "muted": { "background": { "$value": "{color.background.muted}" } },
+    "banner": {
+      "$description": "Page title band.",
+      "background": { "$value": "{color.background.inverse}" },
+      "foreground": { "$value": "{color.text.inverse}" }
+    }
+  }
+}

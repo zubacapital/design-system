@@ -1,0 +1,15 @@
+{
+  "icon-tile": {
+    "$description": "Icon on a filled tile.",
+    "radius": { "$value": "{radius.card}" },
+    "padding": { "$value": "{space.inset.sm}" },
+    "size": {
+      "md": { "$value": "{size.control.md}" },
+      "lg": { "$value": "{size.control.lg}" },
+      "xl": { "$value": "{size.control.xl}" }
+    },
+    "brand": { "background": { "$value": "{color.background.inverse}" } },
+    "accent": { "background": { "$value": "{color.background.accent}" } },
+    "round": { "radius": { "$value": "{radius.circle}" } }
+  }
+}

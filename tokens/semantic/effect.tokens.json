@@ -1,0 +1,19 @@
+{
+  "transition": {
+    "$type": "transition",
+    "default": {
+      "$value": {
+        "duration": "{duration.fast}",
+        "delay": "{duration.none}",
+        "timingFunction": "{easing.ease}"
+      },
+      "$description": "State changes on small elements."
+    }
+  },
+  "layer": {
+    "$type": "number",
+    "$description": "Stacking order (z-index).",
+    "behind": { "$value": "{z-index.below}" },
+    "sticky": { "$value": "{z-index.raised}" }
+  }
+}

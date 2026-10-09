@@ -1,0 +1,18 @@
+{
+  "card": {
+    "$description": "Bordered content block: benefits, insight posts, related links.",
+    "background": { "$value": "{color.background.raised}" },
+    "border": { "$value": "{border.default}" },
+    "radius": { "$value": "{radius.card}" },
+    "padding": { "$value": "{space.inset.lg}" },
+    "gap": { "$value": "{space.gap.default}" },
+    "title": {
+      "typography": { "$value": "{typography.title.md}" },
+      "color": { "$value": "{color.text.brand}" }
+    },
+    "body": {
+      "typography": { "$value": "{typography.body.md}" },
+      "color": { "$value": "{color.text.subtle}" }
+    }
+  }
+}

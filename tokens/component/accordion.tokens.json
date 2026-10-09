@@ -1,0 +1,25 @@
+{
+  "accordion": {
+    "$description": "FAQ disclosure list.",
+    "border": { "$value": "{border.default}" },
+    "radius": { "$value": "{radius.card}" },
+    "max-width": { "$value": "{size.800}" },
+    "item": {
+      "divider": { "$value": "{border.default}" },
+      "padding-block": { "$value": "{space.inset.md}" },
+      "padding-inline": { "$value": "{space.inset.lg}" }
+    },
+    "summary": {
+      "typography": { "$value": "{typography.emphasis}" },
+      "padding-block": { "$value": "{space.inset.sm}" },
+      "gap": { "$value": "{space.gap.default}" }
+    },
+    "marker": {
+      "$description": "Chevron that rotates when the item opens.",
+      "border": { "$value": "{border.marker}" },
+      "size": { "$value": "{size.8}" },
+      "transition": { "$value": "{transition.default}" }
+    },
+    "content": { "color": { "$value": "{color.text.subtle}" } }
+  }
+}

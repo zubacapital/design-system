@@ -1,0 +1,21 @@
+{
+  "footer": {
+    "$description": "Site footer and the legal strip below it.",
+    "background": { "$value": "{color.background.inverse}" },
+    "foreground": { "$value": "{color.text.inverse}" },
+    "typography": { "$value": "{typography.body.sm}" },
+    "padding-block": { "$value": "{space.inset.xl}" },
+    "padding-inline": { "$value": "{space.gutter.page}" },
+    "gap": { "$value": "{space.gap.loose}" },
+    "nav": { "gap": { "$value": "{space.gap.compact}" } },
+    "social": {
+      "background": { "$value": "{color.background.accent}" },
+      "radius": { "$value": "{radius.card}" },
+      "size": { "$value": "{size.control.md}" }
+    },
+    "legal": {
+      "padding-block": { "$value": "{space.inset.md}" },
+      "gap": { "$value": "{space.gap.default}" }
+    }
+  }
+}

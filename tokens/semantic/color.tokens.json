@@ -1,0 +1,87 @@
+{
+  "color": {
+    "$type": "color",
+    "background": {
+      "$description": "Surface fills.",
+      "page": { "$value": "{color.white}" },
+      "subtle": {
+        "$value": "{color.navy.50}",
+        "$description": "Tinted bands, dialogs and callouts."
+      },
+      "muted": {
+        "$value": "{color.slate.100}",
+        "$description": "Neutral band behind a group of cards."
+      },
+      "raised": {
+        "$value": "{color.slate.50}",
+        "$description": "Cards sitting on the page."
+      },
+      "accent": {
+        "$value": "{color.navy.200}",
+        "$description": "Icon tiles and other small highlights."
+      },
+      "inverse": {
+        "$value": "{color.navy.900}",
+        "$description": "Dark brand surfaces; pair with text.inverse."
+      },
+      "glass": {
+        "$value": "{color.white-alpha.80}",
+        "$description": "Translucent panel over imagery."
+      },
+      "overlay": {
+        "$value": "{color.black-alpha.50}",
+        "$description": "Scrim behind dialogs."
+      }
+    },
+    "text": {
+      "default": { "$value": "{color.black}" },
+      "subtle": {
+        "$value": "{color.slate.600}",
+        "$description": "Body copy and supporting text."
+      },
+      "brand": {
+        "$value": "{color.navy.900}",
+        "$description": "Headings and brand-colored labels."
+      },
+      "inverse": {
+        "$value": "{color.white}",
+        "$description": "Text on background.inverse."
+      }
+    },
+    "border": {
+      "default": { "$value": "{color.slate.200}" },
+      "strong": {
+        "$value": "{color.navy.900}",
+        "$description": "Outlined controls."
+      },
+      "neutral": { "$value": "{color.gray.500}" }
+    },
+    "action": {
+      "$description": "Interactive controls.",
+      "primary": {
+        "background": { "$value": "{color.navy.900}" },
+        "foreground": { "$value": "{color.white}" }
+      },
+      "secondary": {
+        "background": { "$value": "{color.white}" },
+        "foreground": { "$value": "{color.navy.900}" },
+        "border": { "$value": "{color.navy.900}" }
+      }
+    },
+    "feedback": {
+      "$description": "Status messaging.",
+      "danger": {
+        "background": { "$value": "{color.red.100}" },
+        "foreground": { "$value": "{color.red.500}" }
+      },
+      "success": {
+        "background": { "$value": "{color.green.100}" },
+        "foreground": { "$value": "{color.green.500}" }
+      },
+      "info": {
+        "background": { "$value": "{color.teal.600}" },
+        "foreground": { "$value": "{color.white}" }
+      }
+    }
+  }
+}

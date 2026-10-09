@@ -1,0 +1,122 @@
+{
+  "typography": {
+    "$type": "typography",
+    "heading": {
+      "$description": "Document headings.",
+      "xl": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.4xl}",
+          "fontWeight": "{font.weight.bold}",
+          "lineHeight": "{font.line-height.tight}"
+        }
+      },
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.3xl}",
+          "fontWeight": "{font.weight.bold}",
+          "lineHeight": "{font.line-height.tight}"
+        }
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.2xl}",
+          "fontWeight": "{font.weight.bold}",
+          "lineHeight": "{font.line-height.tight}"
+        }
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.xl}",
+          "fontWeight": "{font.weight.bold}",
+          "lineHeight": "{font.line-height.tight}"
+        }
+      }
+    },
+    "display": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.3xl}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.tight}"
+      },
+      "$description": "Section titles on marketing pages."
+    },
+    "title": {
+      "$description": "Titles of cards and callouts.",
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.2xl}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.normal}"
+        }
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.xl}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.normal}"
+        }
+      }
+    },
+    "body": {
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.2xl}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}"
+        },
+        "$description": "Lead paragraphs."
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.md}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}"
+        }
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.sans}",
+          "fontSize": "{font.size.sm}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}"
+        }
+      }
+    },
+    "emphasis": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.md}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.line-height.normal}"
+      },
+      "$description": "Stressed body text and disclosure labels."
+    },
+    "label": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.md}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.tight}"
+      },
+      "$description": "Buttons and form controls."
+    },
+    "caption": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.xs}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.normal}"
+      },
+      "$description": "Badges and fine print."
+    }
+  }
+}

@@ -6,12 +6,13 @@
   "license": "UNLICENSED",
   "exports": {
     "./css": "./dist/css/tokens.css",
-    "./tokens/*": "./src/tokens/*"
+    "./tokens/*": "./tokens/*"
   },
   "scripts": {
     "build": "style-dictionary build --config style-dictionary.config.mjs",
     "lint": "biome check .",
-    "lint:fix": "biome check --write ."
+    "lint:fix": "biome check --write .",
+    "test": "node --test"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.14",

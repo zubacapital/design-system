@@ -1,0 +1,31 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "sans": { "$value": ["Cabin", "Calibri", "Trebuchet MS", "sans-serif"] }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": { "$value": 400 },
+      "medium": { "$value": 500 },
+      "semibold": { "$value": 600 },
+      "bold": { "$value": 700 }
+    },
+    "size": {
+      "$type": "dimension",
+      "xs": { "$value": { "value": 0.75, "unit": "rem" } },
+      "sm": { "$value": { "value": 0.875, "unit": "rem" } },
+      "md": { "$value": { "value": 1, "unit": "rem" } },
+      "xl": { "$value": { "value": 1.25, "unit": "rem" } },
+      "2xl": { "$value": { "value": 1.5, "unit": "rem" } },
+      "3xl": { "$value": { "value": 2, "unit": "rem" } },
+      "4xl": { "$value": { "value": 2.5, "unit": "rem" } }
+    },
+    "line-height": {
+      "$type": "number",
+      "$description": "Unitless multipliers of the font size.",
+      "tight": { "$value": 1.1 },
+      "normal": { "$value": 1.5 }
+    }
+  }
+}

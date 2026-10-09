@@ -3,116 +3,297 @@
  */
 
 :root {
-  --breakpoint-primitive-md: 900px;
-  --breakpoint-primitive-lg: 1200px;
-  --color-primitive-navy900: #102b38; /** Primary brand navy. Matches the site's current --color-bg/--color-primary. */
-  --color-primitive-white: #ffffff;
-  --color-primitive-black: #000000;
-  --color-primitive-slate200: #e2e8f0; /** Default border color. */
-  --color-primitive-slate600: #46556e; /** Default body text color. */
-  --color-primitive-sky50: #f2f9fc; /** Light tinted background. */
-  --color-primitive-red500: #ff0000;
-  --color-primitive-red100: #f8d7da;
-  --color-primitive-green500: #22bb33;
-  --color-primitive-green100: #daf2dc;
-  --color-primitive-teal300: oklch(0.8614 0.018 229.04); /** Site accent teal, no hex fallback by design so the OKLCH value is preserved exactly as authored today. */
-  --color-primitive-teal500: oklch(0.7007 0.0777 229.04); /** Klaro cookie-widget accent. Visually distinct from teal300 (different lightness/chroma) - kept separate on purpose, see design-tokens/README. */
-  --color-primitive-teal600: #338a99; /** Investment 'active' status badge color (previously hardcoded #338a99, not part of any token). */
-  --color-primitive-grey500: #808080; /** CSS 'grey' keyword equivalent, used for the investment card border. Deliberately distinct from slate200. */
-  --color-primitive-surfaceSubtle: #fbfcfd; /** Consolidation of two near-identical off-white tints (home.css #fbfcfd and howitworks.css #f9fafc). */
-  --color-surface-translucent: rgb(255 255 255 / 0.8); /** Previously home.css's #ffffffcc (white baked with alpha into the hex). Expressed as a real DTCG alpha color. */
-  --color-overlay-scrim: rgb(0 0 0 / 0.5); /** Modal backdrop scrim, previously duplicated as a literal rgba(0,0,0,0.5) in subscription.css, signup.css and contact-form.css. */
-  --radius-primitive-sm: 4px;
-  --radius-primitive-md: 8px;
-  --radius-primitive-lg: 12px;
-  --radius-primitive-xl: 16px;
-  --radius-primitive-2xl: 32px; /** New step, fixes home.css hero CTA's previously hardcoded 2rem/32px radius. */
-  --radius-primitive-pill: 999px;
-  --shadow-primitive-sm: 0px 1px 2px 0px rgb(0% 0% 0% / 0.05);
-  --shadow-primitive-md: 0px 4px 6px 0px rgb(0% 0% 0% / 0.08);
-  --shadow-primitive-lg: 0px 10px 20px 0px rgb(0% 0% 0% / 0.12);
-  --spacing-primitive-2xs: 0.25rem;
-  --spacing-primitive-xs: 0.5rem;
-  --spacing-primitive-sm: 0.75rem;
-  --spacing-primitive-md: 1rem;
-  --spacing-primitive-lg: 1.5rem;
-  --spacing-primitive-xl: 2rem;
-  --spacing-primitive-2xl: 3rem;
-  --spacing-primitive-3xl: 4rem;
-  --spacing-fluidPrimitive-xs: calc(1rem + 0.1vw); /** Non-standard $type: DTCG's dimension type is a single value-plus-unit term, not an expression. This is a deliberate spec deviation for fluid/calc() values, matching insights.css's post-grid gap. */
-  --spacing-fluidPrimitive-sm: calc(1rem + 0.5vw); /** See xs above for the fluidDimension deviation note. */
-  --spacing-fluidPrimitive-md: calc(1rem + 1vw); /** See xs above. Matches the site's previous --padding-inline. */
-  --typography-primitive-fontSize-xs: 0.75rem;
-  --typography-primitive-fontSize-sm: 0.875rem;
-  --typography-primitive-fontSize-md: 1rem;
-  --typography-primitive-fontSize-lg: 1.125rem;
-  --typography-primitive-fontSize-xl: 1.25rem;
-  --typography-primitive-fontSize-2xl: 1.5rem;
-  --typography-primitive-fontSize-3xl: 2rem;
-  --typography-primitive-fontSize-4xl: 2.5rem;
-  --typography-primitive-fontSize-5xl: 3rem;
-  --typography-primitive-fontWeight-normal: 400;
-  --typography-primitive-fontWeight-medium: 500;
-  --typography-primitive-fontWeight-semibold: 600;
-  --typography-primitive-fontWeight-bold: 700;
-  --typography-primitive-lineHeight-tight: 1.1; /** Unitless line-height for buttons, matching reset.css's button default. */
-  --typography-primitive-lineHeight-normal: 1.5; /** Unitless line-height, replaces post.css's hardcoded 1.5rem (identical at the inherited 1rem font-size). */
-  --typography-primitive-fontFamily-base: Cabin, Calibri, 'Trebuchet MS', sans-serif;
-  --breakpoint-md: var(--breakpoint-primitive-md); /** Documentation-only: no browser resolves var() inside @media/@container conditions, so this cannot replace the literal 900px used directly in header.css, footer.css and home.css media/container queries. This token exists so those literals have a single documented source of truth, checked by the design-tokens drift test. */
-  --breakpoint-lg: var(--breakpoint-primitive-lg); /** Documentation-only, see md above. Matches the literal 1200px in home.css. */
-  --color-bg: var(--color-primitive-navy900);
-  --color-bg-light: var(--color-primitive-sky50);
-  --color-primary: var(--color-primitive-navy900);
-  --color-secondary: var(--color-primitive-teal300);
-  --color-text: var(--color-primitive-slate600);
-  --color-border: var(--color-primitive-slate200);
-  --color-white: var(--color-primitive-white);
-  --color-black: var(--color-primitive-black);
-  --color-red: var(--color-primitive-red500);
-  --color-red-bg: var(--color-primitive-red100);
-  --color-success: var(--color-primitive-green500);
-  --color-success-bg: var(--color-primitive-green100);
-  --color-status-active: var(--color-primitive-teal600); /** Investment card 'active' badge. Previously hardcoded #338a99 with no token. */
-  --color-border-muted: var(--color-primitive-grey500); /** Previously literal CSS 'grey' on investment cards. Kept distinct from borderDefault (materially darker). */
-  --color-surface-subtle: var(--color-primitive-surfaceSubtle); /** Consolidates home.css's #fbfcfd and howitworks.css's #f9fafc into one shared tint. */
-  --color-accent-klaro: var(--color-primitive-teal500); /** Klaro cookie-widget accent, kept distinct from accentSecondary (--color-secondary) since the two OKLCH values genuinely differ in lightness/chroma. */
-  --radius-sm: var(--radius-primitive-sm);
-  --radius-md: var(--radius-primitive-md);
-  --radius-lg: var(--radius-primitive-lg);
-  --radius-xl: var(--radius-primitive-xl);
-  --radius-2xl: var(--radius-primitive-2xl); /** New step. Fixes home.css hero CTA's previously hardcoded 2rem radius. */
-  --radius-pill: var(--radius-primitive-pill);
-  --shadow-sm: var(--shadow-primitive-sm);
-  --shadow-md: var(--shadow-primitive-md);
-  --shadow-lg: var(--shadow-primitive-lg);
-  --spacing-fluidPrimitive-lg: calc(var(--spacing-primitive-sm) + 5vw); /** See xs above. References the sm spacing primitive for its fixed term. */
-  --space-2xs: var(--spacing-primitive-2xs);
-  --space-xs: var(--spacing-primitive-xs);
-  --space-sm: var(--spacing-primitive-sm);
-  --space-md: var(--spacing-primitive-md);
-  --space-lg: var(--spacing-primitive-lg);
-  --space-xl: var(--spacing-primitive-xl);
-  --space-2xl: var(--spacing-primitive-2xl);
-  --space-3xl: var(--spacing-primitive-3xl);
-  --fluid-space-xs: var(--spacing-fluidPrimitive-xs); /** Previously insights.css's calc(1rem + 0.1vw) post-grid gap. */
-  --fluid-space-sm: var(--spacing-fluidPrimitive-sm); /** Previously the repeated literal calc(1rem + 0.5vw) in style.css/footer.css/howitworks.css. */
-  --fluid-space-md: var(--spacing-fluidPrimitive-md); /** Previously the repeated literal calc(1rem + 1vw) and the old --padding-inline token. */
-  --padding-inline: var(--spacing-fluidPrimitive-md);
-  --text-xs: var(--typography-primitive-fontSize-xs);
-  --text-sm: var(--typography-primitive-fontSize-sm);
-  --text-md: var(--typography-primitive-fontSize-md);
-  --text-lg: var(--typography-primitive-fontSize-lg);
-  --text-xl: var(--typography-primitive-fontSize-xl);
-  --text-2xl: var(--typography-primitive-fontSize-2xl);
-  --text-3xl: var(--typography-primitive-fontSize-3xl);
-  --text-4xl: var(--typography-primitive-fontSize-4xl);
-  --text-5xl: var(--typography-primitive-fontSize-5xl);
-  --font-family-base: var(--typography-primitive-fontFamily-base); /** No font-family token existed before this migration; font-family was only ever a hardcoded literal on body. */
-  --font-weight-normal: var(--typography-primitive-fontWeight-normal);
-  --font-weight-medium: var(--typography-primitive-fontWeight-medium);
-  --font-weight-semibold: var(--typography-primitive-fontWeight-semibold);
-  --font-weight-bold: var(--typography-primitive-fontWeight-bold);
-  --line-height-tight: var(--typography-primitive-lineHeight-tight); /** Replaces the shared .btn's hardcoded 1.1 line-height (style.css), aligning button-styled links with buttons. */
-  --line-height-normal: var(--typography-primitive-lineHeight-normal); /** Fixes post.css's hardcoded 1.5rem line-height (unitless, identical at the inherited 1rem font-size). */
-  --fluid-space-lg: var(--spacing-fluidPrimitive-lg); /** Previously home.css's calc(var(--space-sm) + 5vw) hero padding. */
+  --color-white: rgb(255 255 255);
+  --color-black: rgb(0 0 0);
+  --color-navy-50: rgb(242 249 252);
+  --color-navy-200: oklch(0.8614 0.018 229.04); /** Authored in OKLCH; hex is the sRGB fallback. */
+  --color-navy-900: rgb(16 43 56); /** Zuba navy. */
+  --color-teal-600: rgb(51 138 153);
+  --color-slate-50: rgb(251 252 253);
+  --color-slate-100: rgb(249 250 252);
+  --color-slate-200: rgb(226 232 240);
+  --color-slate-600: rgb(70 85 110);
+  --color-gray-500: rgb(128 128 128); /** CSS `grey` keyword. */
+  --color-red-100: rgb(248 215 218);
+  --color-red-500: rgb(255 0 0);
+  --color-green-100: rgb(218 242 220);
+  --color-green-500: rgb(34 187 51);
+  --color-black-alpha-50: rgb(0 0 0 / 0.5);
+  --color-white-alpha-80: rgb(255 255 255 / 0.8);
+  --space-none: 0rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-gutter-page: calc(1rem + 1vw); /** Inline page padding. This is the minimum; in CSS it grows with the viewport. Not aliased to space.md: Style Dictionary's outputReferences rebuilds a pure-reference value's CSS from the reference name, which would silently discard the $extensions escape below. */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+  --border-width-thin: 1px;
+  --border-width-thick: 2px;
+  --size-8: 8px;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-40: 40px;
+  --size-50: 50px;
+  --size-64: 4rem;
+  --size-420: 420px;
+  --size-464: 464px;
+  --size-500: 500px;
+  --size-768: 768px;
+  --size-800: 800px;
+  --size-960: 60rem;
+  --size-1200: 1200px;
+  --size-1440: 1440px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1200px;
+  --font-family-sans: Cabin, Calibri, 'Trebuchet MS', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-line-height-tight: 1.1;
+  --font-line-height-normal: 1.5;
+  --duration-none: 0ms;
+  --duration-fast: 200ms;
+  --easing-ease: cubic-bezier(0.25, 0.1, 0.25, 1); /** CSS `ease` keyword. */
+  --z-index-below: -1;
+  --z-index-raised: 1;
+  --color-background-page: var(--color-white);
+  --color-background-subtle: var(--color-navy-50); /** Tinted bands, dialogs and callouts. */
+  --color-background-muted: var(--color-slate-100); /** Neutral band behind a group of cards. */
+  --color-background-raised: var(--color-slate-50); /** Cards sitting on the page. */
+  --color-background-accent: var(--color-navy-200); /** Icon tiles and other small highlights. */
+  --color-background-inverse: var(--color-navy-900); /** Dark brand surfaces; pair with text.inverse. */
+  --color-background-glass: var(--color-white-alpha-80); /** Translucent panel over imagery. */
+  --color-background-overlay: var(--color-black-alpha-50); /** Scrim behind dialogs. */
+  --color-text-default: var(--color-black);
+  --color-text-subtle: var(--color-slate-600); /** Body copy and supporting text. */
+  --color-text-brand: var(--color-navy-900); /** Headings and brand-colored labels. */
+  --color-text-inverse: var(--color-white); /** Text on background.inverse. */
+  --color-border-default: var(--color-slate-200);
+  --color-border-strong: var(--color-navy-900); /** Outlined controls. */
+  --color-border-neutral: var(--color-gray-500);
+  --color-action-primary-background: var(--color-navy-900);
+  --color-action-primary-foreground: var(--color-white);
+  --color-action-secondary-background: var(--color-white);
+  --color-action-secondary-foreground: var(--color-navy-900);
+  --color-action-secondary-border: var(--color-navy-900);
+  --color-feedback-danger-background: var(--color-red-100);
+  --color-feedback-danger-foreground: var(--color-red-500);
+  --color-feedback-success-background: var(--color-green-100);
+  --color-feedback-success-foreground: var(--color-green-500);
+  --color-feedback-info-background: var(--color-teal-600);
+  --color-feedback-info-foreground: var(--color-white);
+  --space-gap-tight: var(--space-2xs); /** Icon next to its label. */
+  --space-gap-compact: var(--space-sm);
+  --space-gap-default: var(--space-md);
+  --space-gap-loose: var(--space-lg);
+  --space-gap-wide: var(--space-xl);
+  --space-inset-2xs: var(--space-2xs);
+  --space-inset-xs: var(--space-xs);
+  --space-inset-sm: var(--space-sm);
+  --space-inset-md: var(--space-md);
+  --space-inset-lg: var(--space-lg);
+  --space-inset-xl: var(--space-xl);
+  --space-section: var(--space-3xl); /** Vertical rhythm between page sections. */
+  --space-gutter-container: var(--space-xl);
+  --radius-control: var(--radius-md); /** Buttons, inputs, badges. */
+  --radius-card: var(--radius-lg);
+  --radius-panel: var(--radius-xl); /** Callouts and large content blocks. */
+  --radius-feature: var(--radius-2xl); /** Hero-scale surfaces. */
+  --radius-circle: var(--radius-pill);
+  --size-icon-sm: var(--size-20);
+  --size-icon-md: var(--size-24);
+  --size-control-md: var(--size-40);
+  --size-control-lg: var(--size-50);
+  --size-control-xl: var(--size-64);
+  --size-measure-dialog: var(--size-420);
+  --size-measure-narrow: var(--size-500);
+  --size-measure-text: var(--size-768);
+  --size-measure-prose: var(--size-960);
+  --size-measure-wide: var(--size-1200);
+  --size-measure-page: var(--size-1440);
+  --typography-heading-xl: var(--font-weight-bold) var(--font-size-4xl)/var(--font-line-height-tight) var(--font-family-sans);
+  --typography-heading-lg: var(--font-weight-bold) var(--font-size-3xl)/var(--font-line-height-tight) var(--font-family-sans);
+  --typography-heading-md: var(--font-weight-bold) var(--font-size-2xl)/var(--font-line-height-tight) var(--font-family-sans);
+  --typography-heading-sm: var(--font-weight-bold) var(--font-size-xl)/var(--font-line-height-tight) var(--font-family-sans);
+  --typography-display: var(--font-weight-medium) var(--font-size-3xl)/var(--font-line-height-tight) var(--font-family-sans); /** Section titles on marketing pages. */
+  --typography-title-lg: var(--font-weight-semibold) var(--font-size-2xl)/var(--font-line-height-normal) var(--font-family-sans);
+  --typography-title-md: var(--font-weight-semibold) var(--font-size-xl)/var(--font-line-height-normal) var(--font-family-sans);
+  --typography-body-lg: var(--font-weight-regular) var(--font-size-2xl)/var(--font-line-height-normal) var(--font-family-sans); /** Lead paragraphs. */
+  --typography-body-md: var(--font-weight-regular) var(--font-size-md)/var(--font-line-height-normal) var(--font-family-sans);
+  --typography-body-sm: var(--font-weight-regular) var(--font-size-sm)/var(--font-line-height-normal) var(--font-family-sans);
+  --typography-emphasis: var(--font-weight-semibold) var(--font-size-md)/var(--font-line-height-normal) var(--font-family-sans); /** Stressed body text and disclosure labels. */
+  --typography-label: var(--font-weight-regular) var(--font-size-md)/var(--font-line-height-tight) var(--font-family-sans); /** Buttons and form controls. */
+  --typography-caption: var(--font-weight-regular) var(--font-size-xs)/var(--font-line-height-normal) var(--font-family-sans); /** Badges and fine print. */
+  --transition-default: var(--duration-fast) var(--easing-ease) var(--duration-none); /** State changes on small elements. */
+  --layer-behind: var(--z-index-below);
+  --layer-sticky: var(--z-index-raised);
+  --accordion-max-width: var(--size-800);
+  --accordion-marker-size: var(--size-8);
+  --footer-padding-inline: var(--space-gutter-page);
+  --header-padding-inline: var(--space-gutter-page);
+  --header-breakpoint: var(--breakpoint-md); /** Header width at which the menu expands inline. */
+  --hero-panel-width: var(--size-464);
+  --border-default: var(--border-width-thin) solid var(--color-border-default); /** Cards, inputs and dividers. */
+  --border-strong: var(--border-width-thin) solid var(--color-border-strong); /** Outlined controls. */
+  --border-neutral: var(--border-width-thin) solid var(--color-border-neutral);
+  --border-marker: var(--border-width-thick) solid var(--color-text-subtle); /** Strokes that draw an indicator, such as a chevron. */
+  --accordion-radius: var(--radius-card);
+  --accordion-item-padding-block: var(--space-inset-md);
+  --accordion-item-padding-inline: var(--space-inset-lg);
+  --accordion-summary-typography: var(--typography-emphasis);
+  --accordion-summary-padding-block: var(--space-inset-sm);
+  --accordion-summary-gap: var(--space-gap-default);
+  --accordion-marker-transition: var(--transition-default);
+  --accordion-content-color: var(--color-text-subtle);
+  --badge-radius: var(--radius-control);
+  --badge-padding-block: var(--space-inset-2xs);
+  --badge-padding-inline: var(--space-inset-xs);
+  --badge-typography: var(--typography-caption);
+  --badge-info-background: var(--color-feedback-info-background);
+  --badge-info-foreground: var(--color-feedback-info-foreground);
+  --button-radius: var(--radius-control);
+  --button-gap: var(--space-gap-tight); /** Between label and trailing icon. */
+  --button-typography: var(--typography-label);
+  --button-icon-size: var(--size-icon-md);
+  --button-size-md-padding-block: var(--space-inset-sm);
+  --button-size-md-padding-inline: var(--space-inset-lg);
+  --button-size-lg-padding-block: var(--space-inset-md);
+  --button-size-lg-padding-inline: var(--space-inset-lg);
+  --button-primary-background: var(--color-action-primary-background);
+  --button-primary-foreground: var(--color-action-primary-foreground);
+  --button-secondary-background: var(--color-action-secondary-background);
+  --button-secondary-foreground: var(--color-action-secondary-foreground);
+  --button-link-foreground: var(--color-text-subtle);
+  --callout-background: var(--color-background-subtle);
+  --callout-foreground: var(--color-text-subtle);
+  --callout-radius: var(--radius-panel);
+  --callout-padding: var(--space-inset-lg);
+  --callout-title-typography: var(--typography-title-md);
+  --callout-title-color: var(--color-text-brand);
+  --callout-inverse-background: var(--color-background-inverse);
+  --callout-inverse-foreground: var(--color-text-inverse);
+  --card-background: var(--color-background-raised);
+  --card-radius: var(--radius-card);
+  --card-padding: var(--space-inset-lg);
+  --card-gap: var(--space-gap-default);
+  --card-title-typography: var(--typography-title-md);
+  --card-title-color: var(--color-text-brand);
+  --card-body-typography: var(--typography-body-md);
+  --card-body-color: var(--color-text-subtle);
+  --footer-background: var(--color-background-inverse);
+  --footer-foreground: var(--color-text-inverse);
+  --footer-typography: var(--typography-body-sm);
+  --footer-padding-block: var(--space-inset-xl);
+  --footer-gap: var(--space-gap-loose);
+  --footer-nav-gap: var(--space-gap-compact);
+  --footer-social-background: var(--color-background-accent);
+  --footer-social-radius: var(--radius-card);
+  --footer-social-size: var(--size-control-md);
+  --footer-legal-padding-block: var(--space-inset-md);
+  --footer-legal-gap: var(--space-gap-default);
+  --header-background: var(--color-background-page);
+  --header-foreground: var(--color-text-subtle);
+  --header-padding-block: var(--space-inset-md);
+  --header-layer: var(--layer-sticky);
+  --header-nav-gap: var(--space-gap-loose);
+  --header-nav-item-radius: var(--radius-card);
+  --header-nav-item-padding-inline: var(--space-inset-md);
+  --header-nav-login-background: var(--color-action-primary-background);
+  --header-nav-login-foreground: var(--color-action-primary-foreground);
+  --header-nav-toggle-background: var(--color-background-page);
+  --header-nav-toggle-radius: var(--radius-card);
+  --header-nav-toggle-padding: var(--space-inset-sm);
+  --header-nav-menu-background: var(--color-background-page);
+  --header-nav-menu-radius: var(--radius-card);
+  --header-nav-menu-padding-block: var(--space-inset-md);
+  --header-nav-menu-padding-inline: var(--space-inset-lg);
+  --hero-panel-background: var(--color-background-glass);
+  --hero-panel-radius: var(--radius-feature);
+  --hero-panel-padding: var(--space-inset-lg);
+  --hero-panel-gap: var(--space-gap-default);
+  --hero-panel-typography: var(--typography-body-lg);
+  --icon-tile-radius: var(--radius-card);
+  --icon-tile-padding: var(--space-inset-sm);
+  --icon-tile-size-md: var(--size-control-md);
+  --icon-tile-size-lg: var(--size-control-lg);
+  --icon-tile-size-xl: var(--size-control-xl);
+  --icon-tile-brand-background: var(--color-background-inverse);
+  --icon-tile-accent-background: var(--color-background-accent);
+  --icon-tile-round-radius: var(--radius-circle);
+  --input-radius: var(--radius-control);
+  --input-padding-block: var(--space-inset-sm);
+  --input-padding-inline: var(--space-inset-md);
+  --input-typography: var(--typography-label);
+  --modal-background: var(--color-background-subtle);
+  --modal-overlay: var(--color-background-overlay);
+  --modal-radius: var(--radius-card);
+  --modal-padding: var(--space-inset-xl);
+  --modal-width: var(--size-measure-dialog);
+  --modal-gap: var(--space-gap-loose); /** Between form fields. */
+  --modal-title-color: var(--color-text-brand);
+  --modal-title-padding: var(--space-inset-xl);
+  --notification-radius: var(--radius-control);
+  --notification-padding: var(--space-inset-sm);
+  --notification-gap: var(--space-gap-compact);
+  --notification-danger-background: var(--color-feedback-danger-background);
+  --notification-danger-foreground: var(--color-feedback-danger-foreground);
+  --notification-success-background: var(--color-feedback-success-background);
+  --notification-success-foreground: var(--color-feedback-success-foreground);
+  --prose-max-width: var(--size-measure-prose);
+  --prose-spacing: var(--space-gap-default); /** Block margin around paragraphs and headings. */
+  --prose-h1-typography: var(--typography-heading-xl);
+  --prose-h1-color: var(--color-text-brand);
+  --prose-h2-typography: var(--typography-heading-md);
+  --prose-h2-color: var(--color-text-brand);
+  --prose-h3-typography: var(--typography-heading-sm);
+  --prose-h3-color: var(--color-text-brand);
+  --prose-body-typography: var(--typography-body-md);
+  --prose-body-color: var(--color-text-subtle);
+  --prose-nav-link-radius: var(--radius-control);
+  --prose-nav-link-padding-block: var(--space-inset-xs);
+  --prose-nav-link-padding-inline: var(--space-inset-lg);
+  --section-padding-block: var(--space-section);
+  --section-padding-inline: var(--space-gutter-container);
+  --section-gap: var(--space-gap-wide); /** Between cards in the band's grid. */
+  --section-max-width: var(--size-measure-wide);
+  --section-title-typography: var(--typography-display);
+  --section-title-color: var(--color-text-subtle);
+  --section-body-color: var(--color-text-subtle);
+  --section-body-max-width: var(--size-measure-text);
+  --section-actions-max-width: var(--size-measure-narrow);
+  --section-actions-gap: var(--space-gap-default);
+  --section-tinted-background: var(--color-background-subtle);
+  --section-muted-background: var(--color-background-muted);
+  --section-banner-background: var(--color-background-inverse);
+  --section-banner-foreground: var(--color-text-inverse);
+  --accordion-border: var(--border-default);
+  --accordion-item-divider: var(--border-default);
+  --accordion-marker-border: var(--border-marker);
+  --badge-outline-border: var(--border-neutral);
+  --button-secondary-border: var(--border-strong);
+  --callout-border: var(--border-default);
+  --card-border: var(--border-default);
+  --header-nav-item-border: var(--border-strong);
+  --header-nav-toggle-border: var(--border-default);
+  --header-nav-menu-border: var(--border-default);
+  --input-border: var(--border-default);
+  --prose-nav-link-border: var(--border-strong);
 }

@@ -1,0 +1,18 @@
+{
+  "callout": {
+    "$description": "Highlighted block inside long-form pages (notices, contact prompts).",
+    "background": { "$value": "{color.background.subtle}" },
+    "foreground": { "$value": "{color.text.subtle}" },
+    "border": { "$value": "{border.default}" },
+    "radius": { "$value": "{radius.panel}" },
+    "padding": { "$value": "{space.inset.lg}" },
+    "title": {
+      "typography": { "$value": "{typography.title.md}" },
+      "color": { "$value": "{color.text.brand}" }
+    },
+    "inverse": {
+      "background": { "$value": "{color.background.inverse}" },
+      "foreground": { "$value": "{color.text.inverse}" }
+    }
+  }
+}

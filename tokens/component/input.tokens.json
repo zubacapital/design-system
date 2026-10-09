@@ -1,0 +1,10 @@
+{
+  "input": {
+    "$description": "Text inputs and textareas.",
+    "border": { "$value": "{border.default}" },
+    "radius": { "$value": "{radius.control}" },
+    "padding-block": { "$value": "{space.inset.sm}" },
+    "padding-inline": { "$value": "{space.inset.md}" },
+    "typography": { "$value": "{typography.label}" }
+  }
+}

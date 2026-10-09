@@ -1,0 +1,78 @@
+{
+  "space": {
+    "$type": "dimension",
+    "gap": {
+      "$description": "Distance between siblings.",
+      "tight": {
+        "$value": "{space.2xs}",
+        "$description": "Icon next to its label."
+      },
+      "compact": { "$value": "{space.sm}" },
+      "default": { "$value": "{space.md}" },
+      "loose": { "$value": "{space.lg}" },
+      "wide": { "$value": "{space.xl}" }
+    },
+    "inset": {
+      "$description": "Padding inside a container.",
+      "2xs": { "$value": "{space.2xs}" },
+      "xs": { "$value": "{space.xs}" },
+      "sm": { "$value": "{space.sm}" },
+      "md": { "$value": "{space.md}" },
+      "lg": { "$value": "{space.lg}" },
+      "xl": { "$value": "{space.xl}" }
+    },
+    "section": {
+      "$value": "{space.3xl}",
+      "$description": "Vertical rhythm between page sections."
+    },
+    "gutter": {
+      "page": {
+        "$value": { "value": 1, "unit": "rem" },
+        "$description": "Inline page padding. This is the minimum; in CSS it grows with the viewport. Not aliased to space.md: Style Dictionary's outputReferences rebuilds a pure-reference value's CSS from the reference name, which would silently discard the $extensions escape below.",
+        "$extensions": {
+          "com.zubacapital.css": { "value": "calc(1rem + 1vw)" }
+        }
+      },
+      "container": { "$value": "{space.xl}" }
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "control": {
+      "$value": "{radius.md}",
+      "$description": "Buttons, inputs, badges."
+    },
+    "card": { "$value": "{radius.lg}" },
+    "panel": {
+      "$value": "{radius.xl}",
+      "$description": "Callouts and large content blocks."
+    },
+    "feature": {
+      "$value": "{radius.2xl}",
+      "$description": "Hero-scale surfaces."
+    },
+    "circle": { "$value": "{radius.pill}" }
+  },
+  "size": {
+    "$type": "dimension",
+    "icon": {
+      "sm": { "$value": "{size.20}" },
+      "md": { "$value": "{size.24}" }
+    },
+    "control": {
+      "$description": "Square hit areas and icon tiles.",
+      "md": { "$value": "{size.40}" },
+      "lg": { "$value": "{size.50}" },
+      "xl": { "$value": "{size.64}" }
+    },
+    "measure": {
+      "$description": "Maximum content widths.",
+      "dialog": { "$value": "{size.420}" },
+      "narrow": { "$value": "{size.500}" },
+      "text": { "$value": "{size.768}" },
+      "prose": { "$value": "{size.960}" },
+      "wide": { "$value": "{size.1200}" },
+      "page": { "$value": "{size.1440}" }
+    }
+  }
+}

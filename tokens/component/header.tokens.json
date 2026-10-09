@@ -1,0 +1,40 @@
+{
+  "header": {
+    "$description": "Sticky site header with primary navigation.",
+    "background": { "$value": "{color.background.page}" },
+    "foreground": { "$value": "{color.text.subtle}" },
+    "padding-block": { "$value": "{space.inset.md}" },
+    "padding-inline": { "$value": "{space.gutter.page}" },
+    "layer": { "$value": "{layer.sticky}" },
+    "breakpoint": {
+      "$value": "{breakpoint.md}",
+      "$description": "Header width at which the menu expands inline."
+    },
+    "nav": {
+      "gap": { "$value": "{space.gap.loose}" },
+      "item": {
+        "border": { "$value": "{border.strong}" },
+        "radius": { "$value": "{radius.card}" },
+        "padding-inline": { "$value": "{space.inset.md}" }
+      },
+      "login": {
+        "background": { "$value": "{color.action.primary.background}" },
+        "foreground": { "$value": "{color.action.primary.foreground}" }
+      },
+      "toggle": {
+        "background": { "$value": "{color.background.page}" },
+        "border": { "$value": "{border.default}" },
+        "radius": { "$value": "{radius.card}" },
+        "padding": { "$value": "{space.inset.sm}" }
+      },
+      "menu": {
+        "$description": "Popover menu below the breakpoint.",
+        "background": { "$value": "{color.background.page}" },
+        "border": { "$value": "{border.default}" },
+        "radius": { "$value": "{radius.card}" },
+        "padding-block": { "$value": "{space.inset.md}" },
+        "padding-inline": { "$value": "{space.inset.lg}" }
+      }
+    }
+  }
+}

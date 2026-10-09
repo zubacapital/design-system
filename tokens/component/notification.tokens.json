@@ -1,0 +1,16 @@
+{
+  "notification": {
+    "$description": "Inline result message after a form submit.",
+    "radius": { "$value": "{radius.control}" },
+    "padding": { "$value": "{space.inset.sm}" },
+    "gap": { "$value": "{space.gap.compact}" },
+    "danger": {
+      "background": { "$value": "{color.feedback.danger.background}" },
+      "foreground": { "$value": "{color.feedback.danger.foreground}" }
+    },
+    "success": {
+      "background": { "$value": "{color.feedback.success.background}" },
+      "foreground": { "$value": "{color.feedback.success.foreground}" }
+    }
+  }
+}

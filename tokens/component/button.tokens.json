@@ -1,0 +1,38 @@
+{
+  "button": {
+    "$description": "Buttons and button-styled links (hero and CTA actions, form submits, the shared `.btn` secondary button).",
+    "radius": { "$value": "{radius.control}" },
+    "gap": {
+      "$value": "{space.gap.tight}",
+      "$description": "Between label and trailing icon."
+    },
+    "typography": { "$value": "{typography.label}" },
+    "icon-size": { "$value": "{size.icon.md}" },
+    "size": {
+      "md": {
+        "$description": "Form submits.",
+        "padding-block": { "$value": "{space.inset.sm}" },
+        "padding-inline": { "$value": "{space.inset.lg}" }
+      },
+      "lg": {
+        "$description": "Page-level calls to action.",
+        "padding-block": { "$value": "{space.inset.md}" },
+        "padding-inline": { "$value": "{space.inset.lg}" }
+      }
+    },
+    "primary": {
+      "background": { "$value": "{color.action.primary.background}" },
+      "foreground": { "$value": "{color.action.primary.foreground}" }
+    },
+    "secondary": {
+      "$description": "Outlined secondary action: the shared `.btn` (home CTA 'Contact Us', How-it-works help cards) and the hero 'How it works' link.",
+      "background": { "$value": "{color.action.secondary.background}" },
+      "foreground": { "$value": "{color.action.secondary.foreground}" },
+      "border": { "$value": "{border.strong}" }
+    },
+    "link": {
+      "$description": "Text-only button, underlined. Legal-page and footer 'Contact us' buttons; How-it-works now uses the secondary `.btn`.",
+      "foreground": { "$value": "{color.text.subtle}" }
+    }
+  }
+}

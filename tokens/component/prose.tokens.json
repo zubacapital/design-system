@@ -1,0 +1,45 @@
+{
+  "prose": {
+    "$description": "Long-form content: insight posts and legal pages.",
+    "$extensions": {
+      "com.zubacapital.css": {
+        "section-numbering": {
+          "$description": "Legal pages number each h2 inside .sections with a CSS counter; a .preamble's first h2 stays unnumbered.",
+          "value": "counter(article) \". \""
+        },
+        "list-marker": {
+          "$description": "Lists inside legal .sections use @counter-style paren-lower-alpha.",
+          "value": "(a) "
+        }
+      }
+    },
+    "max-width": { "$value": "{size.measure.prose}" },
+    "spacing": {
+      "$value": "{space.gap.default}",
+      "$description": "Block margin around paragraphs and headings."
+    },
+    "h1": {
+      "typography": { "$value": "{typography.heading.xl}" },
+      "color": { "$value": "{color.text.brand}" }
+    },
+    "h2": {
+      "typography": { "$value": "{typography.heading.md}" },
+      "color": { "$value": "{color.text.brand}" }
+    },
+    "h3": {
+      "typography": { "$value": "{typography.heading.sm}" },
+      "color": { "$value": "{color.text.brand}" }
+    },
+    "body": {
+      "typography": { "$value": "{typography.body.md}" },
+      "color": { "$value": "{color.text.subtle}" }
+    },
+    "nav-link": {
+      "$description": "Previous/next links under a post.",
+      "border": { "$value": "{border.strong}" },
+      "radius": { "$value": "{radius.control}" },
+      "padding-block": { "$value": "{space.inset.xs}" },
+      "padding-inline": { "$value": "{space.inset.lg}" }
+    }
+  }
+}

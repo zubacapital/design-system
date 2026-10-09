@@ -1,0 +1,7 @@
+{
+  "z-index": {
+    "$type": "number",
+    "below": { "$value": -1 },
+    "raised": { "$value": 1 }
+  }
+}

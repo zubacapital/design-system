@@ -1,0 +1,36 @@
+{
+  "border": {
+    "$type": "border",
+    "default": {
+      "$value": {
+        "color": "{color.border.default}",
+        "width": "{border-width.thin}",
+        "style": "solid"
+      },
+      "$description": "Cards, inputs and dividers."
+    },
+    "strong": {
+      "$value": {
+        "color": "{color.border.strong}",
+        "width": "{border-width.thin}",
+        "style": "solid"
+      },
+      "$description": "Outlined controls."
+    },
+    "neutral": {
+      "$value": {
+        "color": "{color.border.neutral}",
+        "width": "{border-width.thin}",
+        "style": "solid"
+      }
+    },
+    "marker": {
+      "$value": {
+        "color": "{color.text.subtle}",
+        "width": "{border-width.thick}",
+        "style": "solid"
+      },
+      "$description": "Strokes that draw an indicator, such as a chevron."
+    }
+  }
+}

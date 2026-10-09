@@ -1,0 +1,55 @@
+{
+  "space": {
+    "$type": "dimension",
+    "$description": "Spacing scale on a 4px grid (1rem = 16px).",
+    "none": { "$value": { "value": 0, "unit": "rem" } },
+    "2xs": { "$value": { "value": 0.25, "unit": "rem" } },
+    "xs": { "$value": { "value": 0.5, "unit": "rem" } },
+    "sm": { "$value": { "value": 0.75, "unit": "rem" } },
+    "md": { "$value": { "value": 1, "unit": "rem" } },
+    "lg": { "$value": { "value": 1.5, "unit": "rem" } },
+    "xl": { "$value": { "value": 2, "unit": "rem" } },
+    "2xl": { "$value": { "value": 3, "unit": "rem" } },
+    "3xl": { "$value": { "value": 4, "unit": "rem" } }
+  },
+  "radius": {
+    "$type": "dimension",
+    "$description": "Corner radius scale.",
+    "none": { "$value": { "value": 0, "unit": "px" } },
+    "sm": { "$value": { "value": 4, "unit": "px" } },
+    "md": { "$value": { "value": 8, "unit": "px" } },
+    "lg": { "$value": { "value": 12, "unit": "px" } },
+    "xl": { "$value": { "value": 16, "unit": "px" } },
+    "2xl": { "$value": { "value": 32, "unit": "px" } },
+    "pill": { "$value": { "value": 999, "unit": "px" } }
+  },
+  "border-width": {
+    "$type": "dimension",
+    "thin": { "$value": { "value": 1, "unit": "px" } },
+    "thick": { "$value": { "value": 2, "unit": "px" } }
+  },
+  "size": {
+    "8": { "$value": { "value": 8, "unit": "px" } },
+    "20": { "$value": { "value": 1.25, "unit": "rem" } },
+    "24": { "$value": { "value": 1.5, "unit": "rem" } },
+    "40": { "$value": { "value": 40, "unit": "px" } },
+    "50": { "$value": { "value": 50, "unit": "px" } },
+    "64": { "$value": { "value": 4, "unit": "rem" } },
+    "420": { "$value": { "value": 420, "unit": "px" } },
+    "464": { "$value": { "value": 464, "unit": "px" } },
+    "500": { "$value": { "value": 500, "unit": "px" } },
+    "768": { "$value": { "value": 768, "unit": "px" } },
+    "800": { "$value": { "value": 800, "unit": "px" } },
+    "960": { "$value": { "value": 60, "unit": "rem" } },
+    "1200": { "$value": { "value": 1200, "unit": "px" } },
+    "1440": { "$value": { "value": 1440, "unit": "px" } },
+    "$type": "dimension",
+    "$description": "Fixed sizes for icons, controls and content measures. Keys are the size in px."
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Viewport/container widths at which layouts change.",
+    "md": { "$value": { "value": 900, "unit": "px" } },
+    "lg": { "$value": { "value": 1200, "unit": "px" } }
+  }
+}

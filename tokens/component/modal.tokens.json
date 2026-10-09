@@ -1,0 +1,18 @@
+{
+  "modal": {
+    "$description": "Dialogs: contact, sign-up, subscription.",
+    "background": { "$value": "{color.background.subtle}" },
+    "overlay": { "$value": "{color.background.overlay}" },
+    "radius": { "$value": "{radius.card}" },
+    "padding": { "$value": "{space.inset.xl}" },
+    "width": { "$value": "{size.measure.dialog}" },
+    "gap": {
+      "$value": "{space.gap.loose}",
+      "$description": "Between form fields."
+    },
+    "title": {
+      "color": { "$value": "{color.text.brand}" },
+      "padding": { "$value": "{space.inset.xl}" }
+    }
+  }
+}

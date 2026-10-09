@@ -7,19 +7,22 @@ and built with [Style Dictionary](https://styledictionary.com/).
 ## Layout
 
 ```
-src/tokens/
-  primitives/   raw values (color swatches, spacing scale, radii, shadows, typography, breakpoints)
-  semantic/     aliases of primitives, carrying the exact output CSS custom-property name
-                via $extensions.zuba.cssName
+tokens/
+  zuba.resolver.json   resolver document: which files, which tier (primitive/semantic/component),
+                       merge order - style-dictionary.config.mjs reads this to build its source list
+  primitive/   raw values with no meaning attached
+  semantic/    roles that alias primitives (color.text.subtle, space.gap.default, ...)
+  component/   decisions scoped to one component, aliasing semantic tokens
+  README.md    token-authoring conventions
+  audit.md     historical record of every CSS/token value disagreement and how it was resolved
 style-dictionary.config.mjs   custom transforms for DTCG's structured color/dimension $value objects
 dist/css/tokens.css            built output, committed (see "Consumption" below)
 ```
 
-Colors are authored as the spec's structured object shape
-(`{colorSpace, components, alpha?, hex?}`), not plain CSS strings. Dimensions
-are `{value, unit}`. `$type: "fluidDimension"` is a deliberate, documented
-non-standard extension for `calc()`-based fluid values, since DTCG's
-`dimension` type is a single value+unit term.
+See `tokens/README.md` for the full authoring conventions (colors are
+structured objects with `components` as the source of truth, dimensions are
+`{value, unit}`, the `$extensions["com.zubacapital.css"]` escape for values
+the format can't express natively, and the tier/aliasing rules).
 
 ## Building
 
@@ -49,9 +52,9 @@ script before dev/build/test.
 
 ## Extending per app
 
-Each consuming app may layer its own semantic tokens on top of this
-package's primitives rather than forking it: point a local Style Dictionary
-config's `source` at `node_modules/@zuba/design-system/src/tokens/**/*.json`
+Each consuming app may layer its own semantic/component tokens on top of this
+package's tiers rather than forking it: point a local Style Dictionary
+config's `source` at `node_modules/@zuba/design-system/tokens/**/*.tokens.json`
 plus the app's own extra token files. Keep this repo limited to values both
 apps actually share — if a value only applies to one app, it belongs in that
 app's own layer, not here.

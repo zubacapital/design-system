@@ -1,0 +1,52 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/resolver.json",
+  "name": "Zuba design system",
+  "version": "2025.10",
+  "description": "Token tiers, merged in order. Each tier may only alias itself and the tiers above it.",
+  "sets": {
+    "primitive": {
+      "description": "Raw values: palette, scales, font stacks. No meaning attached.",
+      "sources": [
+        { "$ref": "primitive/color.tokens.json" },
+        { "$ref": "primitive/dimension.tokens.json" },
+        { "$ref": "primitive/font.tokens.json" },
+        { "$ref": "primitive/motion.tokens.json" },
+        { "$ref": "primitive/z-index.tokens.json" }
+      ]
+    },
+    "semantic": {
+      "description": "Roles: what a value is for. Aliases primitives.",
+      "sources": [
+        { "$ref": "semantic/color.tokens.json" },
+        { "$ref": "semantic/dimension.tokens.json" },
+        { "$ref": "semantic/typography.tokens.json" },
+        { "$ref": "semantic/border.tokens.json" },
+        { "$ref": "semantic/effect.tokens.json" }
+      ]
+    },
+    "component": {
+      "description": "Decisions scoped to one component. Aliases semantic tokens.",
+      "sources": [
+        { "$ref": "component/accordion.tokens.json" },
+        { "$ref": "component/badge.tokens.json" },
+        { "$ref": "component/button.tokens.json" },
+        { "$ref": "component/callout.tokens.json" },
+        { "$ref": "component/card.tokens.json" },
+        { "$ref": "component/footer.tokens.json" },
+        { "$ref": "component/header.tokens.json" },
+        { "$ref": "component/hero.tokens.json" },
+        { "$ref": "component/icon-tile.tokens.json" },
+        { "$ref": "component/input.tokens.json" },
+        { "$ref": "component/modal.tokens.json" },
+        { "$ref": "component/notification.tokens.json" },
+        { "$ref": "component/prose.tokens.json" },
+        { "$ref": "component/section.tokens.json" }
+      ]
+    }
+  },
+  "resolutionOrder": [
+    { "$ref": "#/sets/primitive" },
+    { "$ref": "#/sets/semantic" },
+    { "$ref": "#/sets/component" }
+  ]
+}

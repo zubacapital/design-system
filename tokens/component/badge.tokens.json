@@ -1,0 +1,14 @@
+{
+  "badge": {
+    "$description": "Small labels on investment cards.",
+    "radius": { "$value": "{radius.control}" },
+    "padding-block": { "$value": "{space.inset.2xs}" },
+    "padding-inline": { "$value": "{space.inset.xs}" },
+    "typography": { "$value": "{typography.caption}" },
+    "outline": { "border": { "$value": "{border.neutral}" } },
+    "info": {
+      "background": { "$value": "{color.feedback.info.background}" },
+      "foreground": { "$value": "{color.feedback.info.foreground}" }
+    }
+  }
+}
