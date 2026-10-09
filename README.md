@@ -17,6 +17,8 @@ tokens/
   audit.md     historical record of every CSS/token value disagreement and how it was resolved
 style-dictionary.config.mjs   custom transforms for DTCG's structured color/dimension $value objects
 dist/css/tokens.css            built output, committed (see "Consumption" below)
+assets/
+  logo/        brand logo files (SVG/PNG), committed as-is - see "Assets" below
 ```
 
 See `tokens/README.md` for the full authoring conventions (colors are
@@ -66,6 +68,22 @@ repos as an anonymous tarball download:
 Then reference `node_modules/@zuba/design-system/dist/css/tokens.css` — in
 `www` this is copied into `src/public/css/tokens.css` by the `tokens:sync`
 script before dev/build/test.
+
+## Assets
+
+`assets/` holds brand image files that aren't expressible as DTCG tokens
+(logos, icons) - not DTCG tokens themselves, not run through Style
+Dictionary, just committed as-is and consumed by path:
+
+```
+assets/logo/logo.png    standalone mark
+assets/logo/zuba.svg    full wordmark, used in www's header/footer/hero
+```
+
+Consumers reference them as
+`node_modules/@zuba/design-system/assets/logo/<file>` - in `www` this is
+copied into `src/public/img/` by the `assets:sync` script before
+dev/build/test, the same way `tokens:sync` handles `dist/css/tokens.css`.
 
 ## Extending per app
 
