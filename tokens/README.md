@@ -34,6 +34,27 @@ Design tokens for the Zuba website, in the [Design Tokens Format Module 2025.10]
 | `prose` | Insight posts and legal pages |
 | `section` | Page bands and the page title banner |
 
+## Page gutter
+
+`space.gutter.page` is the inline padding of the page chrome and content. It is
+`space.gutter.page-min` (1.5rem) until the content reaches `size.measure.page`
+(80rem). After that the content stays 80rem wide and centered, and the gutter
+grows. Full-bleed sections cancel it with
+`margin-inline: calc(-1 * var(--space-gutter-page))` and pad their own content
+back in with it.
+
+From `breakpoint.page` (64rem) up the minimum is `space.gutter.page-min-wide`
+(3rem). A custom property can't change value inside `@media`, so every consumer
+adds this rule:
+
+```css
+@media (min-width: 64rem) {
+  :root {
+    --space-gutter-page-min: var(--space-gutter-page-min-wide);
+  }
+}
+```
+
 ## Conventions
 
 * Use the most specific tier available: component tokens alias semantic tokens, semantic tokens alias primitives. A component aliases a primitive only for a value that has no role outside it (`hero.panel.width`).
@@ -76,8 +97,9 @@ A few of those resolutions are worth knowing before changing a token:
 * Footer text is `typography.body.sm` (0.875rem) uniformly now; the CSS had a
   responsive 0.9rem/1rem step that's gone.
 * Circles use `radius.circle` (999px) in place of `50%`.
-* Fluid values (`calc(1rem + 1vw)` and similar) are only tokenized for
-  `space.gutter.page`; others stay as raw CSS.
+* Fluid values (`calc(1rem + 1vw)` and similar) stay as raw CSS. The one
+  exception is `space.gutter.page`, the capped page gutter (see "Page gutter"
+  above).
 * `shadow`/`elevation` and a few unreferenced primitives (`font.size.lg`,
   `font.size.5xl`, `z-index.base`) were deleted outright — nothing used them.
 * `input.background`/`input.foreground` were dropped (no input sets either).

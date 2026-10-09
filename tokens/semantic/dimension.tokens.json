@@ -27,11 +27,21 @@
     },
     "gutter": {
       "page": {
-        "$value": { "value": 1, "unit": "rem" },
-        "$description": "Inline page padding. This is the minimum; in CSS it grows with the viewport. Not aliased to space.md: Style Dictionary's outputReferences rebuilds a pure-reference value's CSS from the reference name, which would silently discard the $extensions escape below.",
+        "$value": { "value": 1.5, "unit": "rem" },
+        "$description": "Inline page padding: page-min until content reaches size.measure.page, then it grows so content stays that wide and centered. Uses 100vw rather than % so the value is the same at any nesting depth, letting full-bleed sections cancel it with a negative margin. Not aliased: Style Dictionary's outputReferences rebuilds a pure-reference value's CSS from the reference name, which would silently discard the $extensions escape below.",
         "$extensions": {
-          "com.zubacapital.css": { "value": "calc(1rem + 1vw)" }
+          "com.zubacapital.css": {
+            "value": "max(var(--space-gutter-page-min), (100vw - var(--size-measure-page)) / 2)"
+          }
         }
+      },
+      "page-min": {
+        "$value": "{space.lg}",
+        "$description": "Narrowest page gutter, below breakpoint.page."
+      },
+      "page-min-wide": {
+        "$value": "{space.2xl}",
+        "$description": "Page gutter minimum from breakpoint.page up. Custom properties can't change inside @media, so consumers switch --space-gutter-page-min to it themselves (see the Page gutter section of tokens/README.md)."
       },
       "container": { "$value": "{space.xl}" }
     }
@@ -72,7 +82,7 @@
       "text": { "$value": "{size.768}" },
       "prose": { "$value": "{size.960}" },
       "wide": { "$value": "{size.1200}" },
-      "page": { "$value": "{size.1440}" }
+      "page": { "$value": "{size.1280}" }
     }
   }
 }

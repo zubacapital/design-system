@@ -48,8 +48,24 @@ describe("tokens.css build", () => {
     );
   });
 
-  it("outputs space.gutter.page's CSS escape, not a var() to space.md", () => {
-    assert.equal(props.get("--space-gutter-page"), "calc(1rem + 1vw)");
+  it("outputs space.gutter.page's CSS escape, not a var() to its $value", () => {
+    assert.equal(
+      props.get("--space-gutter-page"),
+      "max(var(--space-gutter-page-min), (100vw - var(--size-measure-page)) / 2)",
+    );
+  });
+
+  it("keeps the page gutter and its cap in rem", () => {
+    assert.equal(
+      resolve(props.get("--space-gutter-page-min"), props),
+      "1.5rem",
+    );
+    assert.equal(
+      resolve(props.get("--space-gutter-page-min-wide"), props),
+      "3rem",
+    );
+    assert.equal(resolve(props.get("--size-measure-page"), props), "80rem");
+    assert.equal(props.get("--breakpoint-page"), "64rem");
   });
 
   it("collapses typography composites to a single font shorthand", () => {

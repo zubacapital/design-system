@@ -64,7 +64,7 @@ StyleDictionary.registerTransform({
   name: "zuba/dimension/css",
   type: "value",
   // must re-run even on a pure reference value, otherwise the $extensions
-  // escape below (space.gutter.page's fluid calc()) is never applied -
+  // escape below (space.gutter.page's capped max()) is never applied -
   // Style Dictionary shortcuts straight to `var(--target)` for plain
   // single-reference dimension tokens unless the transform is transitive.
   transitive: true,
@@ -75,7 +75,7 @@ StyleDictionary.registerTransform({
       options.usesDtcg ? token.$type : token.type,
     ),
   // space.gutter.page is the one token the format can't express natively
-  // (a fluid calc()) - $extensions["com.zubacapital.css"] carries the real
+  // (a max() over 100vw) - $extensions["com.zubacapital.css"] carries the real
   // CSS value for it, with $value left as the closest static approximation.
   transform: (token, _config, options) => {
     const cssEscape = token.$extensions?.["com.zubacapital.css"]?.value;

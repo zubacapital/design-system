@@ -29,7 +29,7 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
-  --space-gutter-page: calc(1rem + 1vw); /** Inline page padding. This is the minimum; in CSS it grows with the viewport. Not aliased to space.md: Style Dictionary's outputReferences rebuilds a pure-reference value's CSS from the reference name, which would silently discard the $extensions escape below. */
+  --space-gutter-page: max(var(--space-gutter-page-min), (100vw - var(--size-measure-page)) / 2); /** Inline page padding: page-min until content reaches size.measure.page, then it grows so content stays that wide and centered. Uses 100vw rather than % so the value is the same at any nesting depth, letting full-bleed sections cancel it with a negative margin. Not aliased: Style Dictionary's outputReferences rebuilds a pure-reference value's CSS from the reference name, which would silently discard the $extensions escape below. */
   --radius-none: 0px;
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -52,8 +52,10 @@
   --size-800: 800px;
   --size-960: 60rem;
   --size-1200: 1200px;
+  --size-1280: 80rem;
   --size-1440: 1440px;
   --breakpoint-md: 900px;
+  --breakpoint-page: 64rem; /** Viewport width at which the page gutter widens from space.gutter.page-min to space.gutter.page-min-wide. */
   --breakpoint-lg: 1200px;
   --font-family-sans: Cabin, Calibri, 'Trebuchet MS', sans-serif;
   --font-weight-regular: 400;
@@ -112,6 +114,8 @@
   --space-inset-lg: var(--space-lg);
   --space-inset-xl: var(--space-xl);
   --space-section: var(--space-3xl); /** Vertical rhythm between page sections. */
+  --space-gutter-page-min: var(--space-lg); /** Narrowest page gutter, below breakpoint.page. */
+  --space-gutter-page-min-wide: var(--space-2xl); /** Page gutter minimum from breakpoint.page up. Custom properties can't change inside @media, so consumers switch --space-gutter-page-min to it themselves (see the Page gutter section of tokens/README.md). */
   --space-gutter-container: var(--space-xl);
   --radius-control: var(--radius-md); /** Buttons, inputs, badges. */
   --radius-card: var(--radius-lg);
@@ -128,7 +132,7 @@
   --size-measure-text: var(--size-768);
   --size-measure-prose: var(--size-960);
   --size-measure-wide: var(--size-1200);
-  --size-measure-page: var(--size-1440);
+  --size-measure-page: var(--size-1280);
   --typography-heading-xl: var(--font-weight-bold) var(--font-size-4xl)/var(--font-line-height-tight) var(--font-family-sans);
   --typography-heading-lg: var(--font-weight-bold) var(--font-size-3xl)/var(--font-line-height-tight) var(--font-family-sans);
   --typography-heading-md: var(--font-weight-bold) var(--font-size-2xl)/var(--font-line-height-tight) var(--font-family-sans);

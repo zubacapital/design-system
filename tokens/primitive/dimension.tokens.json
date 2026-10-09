@@ -42,6 +42,7 @@
     "800": { "$value": { "value": 800, "unit": "px" } },
     "960": { "$value": { "value": 60, "unit": "rem" } },
     "1200": { "$value": { "value": 1200, "unit": "px" } },
+    "1280": { "$value": { "value": 80, "unit": "rem" } },
     "1440": { "$value": { "value": 1440, "unit": "px" } },
     "$type": "dimension",
     "$description": "Fixed sizes for icons, controls and content measures. Keys are the size in px."
@@ -50,6 +51,10 @@
     "$type": "dimension",
     "$description": "Viewport/container widths at which layouts change.",
     "md": { "$value": { "value": 900, "unit": "px" } },
+    "page": {
+      "$value": { "value": 64, "unit": "rem" },
+      "$description": "Viewport width at which the page gutter widens from space.gutter.page-min to space.gutter.page-min-wide."
+    },
     "lg": { "$value": { "value": 1200, "unit": "px" } }
   }
 }
