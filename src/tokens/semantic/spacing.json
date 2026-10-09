@@ -1,0 +1,76 @@
+{
+  "spacing": {
+    "semantic": {
+      "2xs": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.2xs}",
+        "$extensions": { "zuba": { "cssName": "space-2xs" } }
+      },
+      "xs": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.xs}",
+        "$extensions": { "zuba": { "cssName": "space-xs" } }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.sm}",
+        "$extensions": { "zuba": { "cssName": "space-sm" } }
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.md}",
+        "$extensions": { "zuba": { "cssName": "space-md" } }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.lg}",
+        "$extensions": { "zuba": { "cssName": "space-lg" } }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.xl}",
+        "$extensions": { "zuba": { "cssName": "space-xl" } }
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.2xl}",
+        "$extensions": { "zuba": { "cssName": "space-2xl" } }
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": "{spacing.primitive.3xl}",
+        "$extensions": { "zuba": { "cssName": "space-3xl" } }
+      },
+      "fluidXs": {
+        "$type": "fluidDimension",
+        "$description": "Previously insights.css's calc(1rem + 0.1vw) post-grid gap.",
+        "$value": "{spacing.fluidPrimitive.xs}",
+        "$extensions": { "zuba": { "cssName": "fluid-space-xs" } }
+      },
+      "fluidSm": {
+        "$type": "fluidDimension",
+        "$description": "Previously the repeated literal calc(1rem + 0.5vw) in style.css/footer.css/howitworks.css.",
+        "$value": "{spacing.fluidPrimitive.sm}",
+        "$extensions": { "zuba": { "cssName": "fluid-space-sm" } }
+      },
+      "fluidMd": {
+        "$type": "fluidDimension",
+        "$description": "Previously the repeated literal calc(1rem + 1vw) and the old --padding-inline token.",
+        "$value": "{spacing.fluidPrimitive.md}",
+        "$extensions": { "zuba": { "cssName": "fluid-space-md" } }
+      },
+      "fluidLg": {
+        "$type": "fluidDimension",
+        "$description": "Previously home.css's calc(var(--space-sm) + 5vw) hero padding.",
+        "$value": "{spacing.fluidPrimitive.lg}",
+        "$extensions": { "zuba": { "cssName": "fluid-space-lg" } }
+      },
+      "paddingInline": {
+        "$type": "fluidDimension",
+        "$deprecated": "Renamed to --fluid-space-md. Kept as a back-compat alias.",
+        "$value": "{spacing.fluidPrimitive.md}",
+        "$extensions": { "zuba": { "cssName": "padding-inline" } }
+      }
+    }
+  }
+}

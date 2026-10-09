@@ -1,0 +1,18 @@
+{
+  "breakpoint": {
+    "semantic": {
+      "md": {
+        "$type": "dimension",
+        "$description": "Documentation-only: no browser resolves var() inside @media/@container conditions, so this cannot replace the literal 900px used directly in header.css, footer.css and home.css media/container queries. This token exists so those literals have a single documented source of truth, checked by the design-tokens drift test.",
+        "$value": "{breakpoint.primitive.md}",
+        "$extensions": { "zuba": { "cssName": "breakpoint-md" } }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$description": "Documentation-only, see md above. Matches the literal 1200px in home.css.",
+        "$value": "{breakpoint.primitive.lg}",
+        "$extensions": { "zuba": { "cssName": "breakpoint-lg" } }
+      }
+    }
+  }
+}

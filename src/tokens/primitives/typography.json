@@ -1,0 +1,62 @@
+{
+  "typography": {
+    "primitive": {
+      "fontSize": {
+        "xs": {
+          "$type": "dimension",
+          "$value": { "value": 0.75, "unit": "rem" }
+        },
+        "sm": {
+          "$type": "dimension",
+          "$value": { "value": 0.875, "unit": "rem" }
+        },
+        "md": { "$type": "dimension", "$value": { "value": 1, "unit": "rem" } },
+        "lg": {
+          "$type": "dimension",
+          "$value": { "value": 1.125, "unit": "rem" }
+        },
+        "xl": {
+          "$type": "dimension",
+          "$value": { "value": 1.25, "unit": "rem" }
+        },
+        "2xl": {
+          "$type": "dimension",
+          "$value": { "value": 1.5, "unit": "rem" }
+        },
+        "3xl": {
+          "$type": "dimension",
+          "$value": { "value": 2, "unit": "rem" }
+        },
+        "4xl": {
+          "$type": "dimension",
+          "$value": { "value": 2.5, "unit": "rem" }
+        },
+        "5xl": { "$type": "dimension", "$value": { "value": 3, "unit": "rem" } }
+      },
+      "fontWeight": {
+        "normal": { "$type": "fontWeight", "$value": 400 },
+        "medium": { "$type": "fontWeight", "$value": 500 },
+        "semibold": { "$type": "fontWeight", "$value": 600 },
+        "bold": { "$type": "fontWeight", "$value": 700 }
+      },
+      "lineHeight": {
+        "tight": {
+          "$type": "number",
+          "$description": "Unitless line-height for buttons, matching reset.css's button default.",
+          "$value": 1.1
+        },
+        "normal": {
+          "$type": "number",
+          "$description": "Unitless line-height, replaces post.css's hardcoded 1.5rem (identical at the inherited 1rem font-size).",
+          "$value": 1.5
+        }
+      },
+      "fontFamily": {
+        "base": {
+          "$type": "fontFamily",
+          "$value": ["Cabin", "Calibri", "Trebuchet MS", "sans-serif"]
+        }
+      }
+    }
+  }
+}

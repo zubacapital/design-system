@@ -1,0 +1,89 @@
+{
+  "typography": {
+    "semantic": {
+      "textXs": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.xs}",
+        "$extensions": { "zuba": { "cssName": "text-xs" } }
+      },
+      "textSm": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.sm}",
+        "$extensions": { "zuba": { "cssName": "text-sm" } }
+      },
+      "textMd": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.md}",
+        "$extensions": { "zuba": { "cssName": "text-md" } }
+      },
+      "textLg": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.lg}",
+        "$extensions": { "zuba": { "cssName": "text-lg" } }
+      },
+      "textXl": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.xl}",
+        "$extensions": { "zuba": { "cssName": "text-xl" } }
+      },
+      "text2xl": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.2xl}",
+        "$extensions": { "zuba": { "cssName": "text-2xl" } }
+      },
+      "text3xl": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.3xl}",
+        "$extensions": { "zuba": { "cssName": "text-3xl" } }
+      },
+      "text4xl": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.4xl}",
+        "$extensions": { "zuba": { "cssName": "text-4xl" } }
+      },
+      "text5xl": {
+        "$type": "dimension",
+        "$value": "{typography.primitive.fontSize.5xl}",
+        "$extensions": { "zuba": { "cssName": "text-5xl" } }
+      },
+      "fontFamilyBase": {
+        "$type": "fontFamily",
+        "$description": "No font-family token existed before this migration; font-family was only ever a hardcoded literal on body.",
+        "$value": "{typography.primitive.fontFamily.base}",
+        "$extensions": { "zuba": { "cssName": "font-family-base" } }
+      },
+      "fontWeightNormal": {
+        "$type": "fontWeight",
+        "$value": "{typography.primitive.fontWeight.normal}",
+        "$extensions": { "zuba": { "cssName": "font-weight-normal" } }
+      },
+      "fontWeightMedium": {
+        "$type": "fontWeight",
+        "$value": "{typography.primitive.fontWeight.medium}",
+        "$extensions": { "zuba": { "cssName": "font-weight-medium" } }
+      },
+      "fontWeightSemibold": {
+        "$type": "fontWeight",
+        "$value": "{typography.primitive.fontWeight.semibold}",
+        "$extensions": { "zuba": { "cssName": "font-weight-semibold" } }
+      },
+      "fontWeightBold": {
+        "$type": "fontWeight",
+        "$value": "{typography.primitive.fontWeight.bold}",
+        "$extensions": { "zuba": { "cssName": "font-weight-bold" } }
+      },
+      "lineHeightTight": {
+        "$type": "number",
+        "$description": "Replaces the shared .btn's hardcoded 1.1 line-height (style.css), aligning button-styled links with buttons.",
+        "$value": "{typography.primitive.lineHeight.tight}",
+        "$extensions": { "zuba": { "cssName": "line-height-tight" } }
+      },
+      "lineHeightNormal": {
+        "$type": "number",
+        "$description": "Fixes post.css's hardcoded 1.5rem line-height (unitless, identical at the inherited 1rem font-size).",
+        "$value": "{typography.primitive.lineHeight.normal}",
+        "$extensions": { "zuba": { "cssName": "line-height-normal" } }
+      }
+    }
+  }
+}

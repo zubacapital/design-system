@@ -1,0 +1,21 @@
+{
+  "shadow": {
+    "semantic": {
+      "sm": {
+        "$type": "shadow",
+        "$value": "{shadow.primitive.sm}",
+        "$extensions": { "zuba": { "cssName": "shadow-sm" } }
+      },
+      "md": {
+        "$type": "shadow",
+        "$value": "{shadow.primitive.md}",
+        "$extensions": { "zuba": { "cssName": "shadow-md" } }
+      },
+      "lg": {
+        "$type": "shadow",
+        "$value": "{shadow.primitive.lg}",
+        "$extensions": { "zuba": { "cssName": "shadow-lg" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "color": {
+    "primitive": {
+      "navy900": {
+        "$type": "color",
+        "$description": "Primary brand navy. Matches the site's current --color-bg/--color-primary.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0627, 0.1686, 0.2196],
+          "hex": "#102b38"
+        }
+      },
+      "white": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        }
+      },
+      "black": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "hex": "#000000"
+        }
+      },
+      "slate200": {
+        "$type": "color",
+        "$description": "Default border color.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8863, 0.9098, 0.9412],
+          "hex": "#e2e8f0"
+        }
+      },
+      "slate600": {
+        "$type": "color",
+        "$description": "Default body text color.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2745, 0.3333, 0.4314],
+          "hex": "#46556e"
+        }
+      },
+      "sky50": {
+        "$type": "color",
+        "$description": "Light tinted background.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.949, 0.9765, 0.9882],
+          "hex": "#f2f9fc"
+        }
+      },
+      "red500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0, 0],
+          "hex": "#ff0000"
+        }
+      },
+      "red100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9725, 0.8431, 0.8549],
+          "hex": "#f8d7da"
+        }
+      },
+      "green500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1333, 0.7333, 0.2],
+          "hex": "#22bb33"
+        }
+      },
+      "green100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8549, 0.949, 0.8627],
+          "hex": "#daf2dc"
+        }
+      },
+      "teal300": {
+        "$type": "color",
+        "$description": "Site accent teal, no hex fallback by design so the OKLCH value is preserved exactly as authored today.",
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [0.8614, 0.018, 229.04]
+        }
+      },
+      "teal500": {
+        "$type": "color",
+        "$description": "Klaro cookie-widget accent. Visually distinct from teal300 (different lightness/chroma) - kept separate on purpose, see design-tokens/README.",
+        "$value": {
+          "colorSpace": "oklch",
+          "components": [0.7007, 0.0777, 229.04]
+        }
+      },
+      "teal600": {
+        "$type": "color",
+        "$description": "Investment 'active' status badge color (previously hardcoded #338a99, not part of any token).",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2, 0.5412, 0.6],
+          "hex": "#338a99"
+        }
+      },
+      "grey500": {
+        "$type": "color",
+        "$description": "CSS 'grey' keyword equivalent, used for the investment card border. Deliberately distinct from slate200.",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.502, 0.502, 0.502],
+          "hex": "#808080"
+        }
+      },
+      "surfaceSubtle": {
+        "$type": "color",
+        "$description": "Consolidation of two near-identical off-white tints (home.css #fbfcfd and howitworks.css #f9fafc).",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9843, 0.9882, 0.9922],
+          "hex": "#fbfcfd"
+        }
+      }
+    }
+  }
+}

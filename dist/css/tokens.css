@@ -1,0 +1,118 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --breakpoint-primitive-md: 900px;
+  --breakpoint-primitive-lg: 1200px;
+  --color-primitive-navy900: #102b38; /** Primary brand navy. Matches the site's current --color-bg/--color-primary. */
+  --color-primitive-white: #ffffff;
+  --color-primitive-black: #000000;
+  --color-primitive-slate200: #e2e8f0; /** Default border color. */
+  --color-primitive-slate600: #46556e; /** Default body text color. */
+  --color-primitive-sky50: #f2f9fc; /** Light tinted background. */
+  --color-primitive-red500: #ff0000;
+  --color-primitive-red100: #f8d7da;
+  --color-primitive-green500: #22bb33;
+  --color-primitive-green100: #daf2dc;
+  --color-primitive-teal300: oklch(0.8614 0.018 229.04); /** Site accent teal, no hex fallback by design so the OKLCH value is preserved exactly as authored today. */
+  --color-primitive-teal500: oklch(0.7007 0.0777 229.04); /** Klaro cookie-widget accent. Visually distinct from teal300 (different lightness/chroma) - kept separate on purpose, see design-tokens/README. */
+  --color-primitive-teal600: #338a99; /** Investment 'active' status badge color (previously hardcoded #338a99, not part of any token). */
+  --color-primitive-grey500: #808080; /** CSS 'grey' keyword equivalent, used for the investment card border. Deliberately distinct from slate200. */
+  --color-primitive-surfaceSubtle: #fbfcfd; /** Consolidation of two near-identical off-white tints (home.css #fbfcfd and howitworks.css #f9fafc). */
+  --color-surface-translucent: rgb(255 255 255 / 0.8); /** Previously home.css's #ffffffcc (white baked with alpha into the hex). Expressed as a real DTCG alpha color. */
+  --color-overlay-scrim: rgb(0 0 0 / 0.5); /** Modal backdrop scrim, previously duplicated as a literal rgba(0,0,0,0.5) in subscription.css, signup.css and contact-form.css. */
+  --radius-primitive-sm: 4px;
+  --radius-primitive-md: 8px;
+  --radius-primitive-lg: 12px;
+  --radius-primitive-xl: 16px;
+  --radius-primitive-2xl: 32px; /** New step, fixes home.css hero CTA's previously hardcoded 2rem/32px radius. */
+  --radius-primitive-pill: 999px;
+  --shadow-primitive-sm: 0px 1px 2px 0px rgb(0% 0% 0% / 0.05);
+  --shadow-primitive-md: 0px 4px 6px 0px rgb(0% 0% 0% / 0.08);
+  --shadow-primitive-lg: 0px 10px 20px 0px rgb(0% 0% 0% / 0.12);
+  --spacing-primitive-2xs: 0.25rem;
+  --spacing-primitive-xs: 0.5rem;
+  --spacing-primitive-sm: 0.75rem;
+  --spacing-primitive-md: 1rem;
+  --spacing-primitive-lg: 1.5rem;
+  --spacing-primitive-xl: 2rem;
+  --spacing-primitive-2xl: 3rem;
+  --spacing-primitive-3xl: 4rem;
+  --spacing-fluidPrimitive-xs: calc(1rem + 0.1vw); /** Non-standard $type: DTCG's dimension type is a single value-plus-unit term, not an expression. This is a deliberate spec deviation for fluid/calc() values, matching insights.css's post-grid gap. */
+  --spacing-fluidPrimitive-sm: calc(1rem + 0.5vw); /** See xs above for the fluidDimension deviation note. */
+  --spacing-fluidPrimitive-md: calc(1rem + 1vw); /** See xs above. Matches the site's previous --padding-inline. */
+  --typography-primitive-fontSize-xs: 0.75rem;
+  --typography-primitive-fontSize-sm: 0.875rem;
+  --typography-primitive-fontSize-md: 1rem;
+  --typography-primitive-fontSize-lg: 1.125rem;
+  --typography-primitive-fontSize-xl: 1.25rem;
+  --typography-primitive-fontSize-2xl: 1.5rem;
+  --typography-primitive-fontSize-3xl: 2rem;
+  --typography-primitive-fontSize-4xl: 2.5rem;
+  --typography-primitive-fontSize-5xl: 3rem;
+  --typography-primitive-fontWeight-normal: 400;
+  --typography-primitive-fontWeight-medium: 500;
+  --typography-primitive-fontWeight-semibold: 600;
+  --typography-primitive-fontWeight-bold: 700;
+  --typography-primitive-lineHeight-tight: 1.1; /** Unitless line-height for buttons, matching reset.css's button default. */
+  --typography-primitive-lineHeight-normal: 1.5; /** Unitless line-height, replaces post.css's hardcoded 1.5rem (identical at the inherited 1rem font-size). */
+  --typography-primitive-fontFamily-base: Cabin, Calibri, 'Trebuchet MS', sans-serif;
+  --breakpoint-md: var(--breakpoint-primitive-md); /** Documentation-only: no browser resolves var() inside @media/@container conditions, so this cannot replace the literal 900px used directly in header.css, footer.css and home.css media/container queries. This token exists so those literals have a single documented source of truth, checked by the design-tokens drift test. */
+  --breakpoint-lg: var(--breakpoint-primitive-lg); /** Documentation-only, see md above. Matches the literal 1200px in home.css. */
+  --color-bg: var(--color-primitive-navy900);
+  --color-bg-light: var(--color-primitive-sky50);
+  --color-primary: var(--color-primitive-navy900);
+  --color-secondary: var(--color-primitive-teal300);
+  --color-text: var(--color-primitive-slate600);
+  --color-border: var(--color-primitive-slate200);
+  --color-white: var(--color-primitive-white);
+  --color-black: var(--color-primitive-black);
+  --color-red: var(--color-primitive-red500);
+  --color-red-bg: var(--color-primitive-red100);
+  --color-success: var(--color-primitive-green500);
+  --color-success-bg: var(--color-primitive-green100);
+  --color-status-active: var(--color-primitive-teal600); /** Investment card 'active' badge. Previously hardcoded #338a99 with no token. */
+  --color-border-muted: var(--color-primitive-grey500); /** Previously literal CSS 'grey' on investment cards. Kept distinct from borderDefault (materially darker). */
+  --color-surface-subtle: var(--color-primitive-surfaceSubtle); /** Consolidates home.css's #fbfcfd and howitworks.css's #f9fafc into one shared tint. */
+  --color-accent-klaro: var(--color-primitive-teal500); /** Klaro cookie-widget accent, kept distinct from accentSecondary (--color-secondary) since the two OKLCH values genuinely differ in lightness/chroma. */
+  --radius-sm: var(--radius-primitive-sm);
+  --radius-md: var(--radius-primitive-md);
+  --radius-lg: var(--radius-primitive-lg);
+  --radius-xl: var(--radius-primitive-xl);
+  --radius-2xl: var(--radius-primitive-2xl); /** New step. Fixes home.css hero CTA's previously hardcoded 2rem radius. */
+  --radius-pill: var(--radius-primitive-pill);
+  --shadow-sm: var(--shadow-primitive-sm);
+  --shadow-md: var(--shadow-primitive-md);
+  --shadow-lg: var(--shadow-primitive-lg);
+  --spacing-fluidPrimitive-lg: calc(var(--spacing-primitive-sm) + 5vw); /** See xs above. References the sm spacing primitive for its fixed term. */
+  --space-2xs: var(--spacing-primitive-2xs);
+  --space-xs: var(--spacing-primitive-xs);
+  --space-sm: var(--spacing-primitive-sm);
+  --space-md: var(--spacing-primitive-md);
+  --space-lg: var(--spacing-primitive-lg);
+  --space-xl: var(--spacing-primitive-xl);
+  --space-2xl: var(--spacing-primitive-2xl);
+  --space-3xl: var(--spacing-primitive-3xl);
+  --fluid-space-xs: var(--spacing-fluidPrimitive-xs); /** Previously insights.css's calc(1rem + 0.1vw) post-grid gap. */
+  --fluid-space-sm: var(--spacing-fluidPrimitive-sm); /** Previously the repeated literal calc(1rem + 0.5vw) in style.css/footer.css/howitworks.css. */
+  --fluid-space-md: var(--spacing-fluidPrimitive-md); /** Previously the repeated literal calc(1rem + 1vw) and the old --padding-inline token. */
+  --padding-inline: var(--spacing-fluidPrimitive-md);
+  --text-xs: var(--typography-primitive-fontSize-xs);
+  --text-sm: var(--typography-primitive-fontSize-sm);
+  --text-md: var(--typography-primitive-fontSize-md);
+  --text-lg: var(--typography-primitive-fontSize-lg);
+  --text-xl: var(--typography-primitive-fontSize-xl);
+  --text-2xl: var(--typography-primitive-fontSize-2xl);
+  --text-3xl: var(--typography-primitive-fontSize-3xl);
+  --text-4xl: var(--typography-primitive-fontSize-4xl);
+  --text-5xl: var(--typography-primitive-fontSize-5xl);
+  --font-family-base: var(--typography-primitive-fontFamily-base); /** No font-family token existed before this migration; font-family was only ever a hardcoded literal on body. */
+  --font-weight-normal: var(--typography-primitive-fontWeight-normal);
+  --font-weight-medium: var(--typography-primitive-fontWeight-medium);
+  --font-weight-semibold: var(--typography-primitive-fontWeight-semibold);
+  --font-weight-bold: var(--typography-primitive-fontWeight-bold);
+  --line-height-tight: var(--typography-primitive-lineHeight-tight); /** Replaces the shared .btn's hardcoded 1.1 line-height (style.css), aligning button-styled links with buttons. */
+  --line-height-normal: var(--typography-primitive-lineHeight-normal); /** Fixes post.css's hardcoded 1.5rem line-height (unitless, identical at the inherited 1rem font-size). */
+  --fluid-space-lg: var(--spacing-fluidPrimitive-lg); /** Previously home.css's calc(var(--space-sm) + 5vw) hero padding. */
+}
