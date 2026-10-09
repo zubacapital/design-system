@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - uses: pnpm/action-setup@v6.1.0
+
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build
+
+      # dist/ is committed and consumed by git tag, so it must match the tokens.
+      - name: Check dist/ is up to date
+        run: |
+          if ! git diff --exit-code -- dist/ || [ -n "$(git status --porcelain -- dist/)" ]; then
+            echo "::error::dist/ is stale - run 'pnpm build' and commit the result."
+            git status --porcelain -- dist/
+            exit 1
+          fi
+
+      - name: Test
+        run: pnpm test
+
+      - name: Check tag matches package.json version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "$GITHUB_REF_NAME" != "$version" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $version."
+            exit 1
+          fi
