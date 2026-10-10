@@ -1,0 +1,12 @@
+{
+  "intro": {
+    "$description": "Introductory paragraph under a section title (`.intro`: the benefits and CTA-bar intros). Consumers center and balance it (`text-align: center`, `text-wrap: balance`), which the format can't express.",
+    "typography": { "$value": "{typography.intro}" },
+    "color": { "$value": "{color.text.subtle}" },
+    "max-width": { "$value": "{size.measure.text}" },
+    "margin-block-start": {
+      "$value": "{space.gap.default}",
+      "$description": "Between the section title and the intro."
+    }
+  }
+}

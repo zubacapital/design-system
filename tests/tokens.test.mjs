@@ -48,6 +48,41 @@ describe("tokens.css build", () => {
     );
   });
 
+  it("gives the cta navy on light surfaces and white on dark ones", () => {
+    assert.equal(
+      resolve(props.get("--cta-background"), props),
+      "rgb(16 43 56)",
+    );
+    assert.equal(
+      resolve(props.get("--cta-foreground"), props),
+      "rgb(255 255 255)",
+    );
+    assert.equal(
+      resolve(props.get("--cta-inverse-background"), props),
+      "rgb(255 255 255)",
+    );
+    assert.equal(
+      resolve(props.get("--cta-inverse-foreground"), props),
+      "rgb(16 43 56)",
+    );
+  });
+
+  it("sets the intro in body type, subtle and text-width", () => {
+    assert.equal(
+      resolve(props.get("--intro-typography"), props),
+      "400 1rem/1.5 Cabin, Calibri, 'Trebuchet MS', sans-serif",
+    );
+    assert.equal(
+      resolve(props.get("--intro-color"), props),
+      resolve(props.get("--color-text-subtle"), props),
+    );
+    assert.equal(resolve(props.get("--intro-max-width"), props), "768px");
+    assert.equal(
+      resolve(props.get("--intro-margin-block-start"), props),
+      "1rem",
+    );
+  });
+
   it("outputs space.gutter.page's CSS escape, not a var() to its $value", () => {
     assert.equal(
       props.get("--space-gutter-page"),

@@ -27,10 +27,12 @@ Design tokens for the Zuba website, in the [Design Tokens Format Module 2025.10]
 | `button` | Hero and CTA actions, the shared `.btn` secondary button, form submits, text buttons |
 | `callout` | Notices and contact prompts on legal pages |
 | `card` | Benefits, insight posts, related links |
+| `cta` | The main call to action (`.cta`), on light and dark surfaces |
 | `footer`, `header` | Site chrome, including navigation |
 | `hero` | Home hero panel |
 | `icon-tile` | Benefit icons, social links |
 | `input`, `modal`, `notification` | Contact, sign-up and subscription dialogs |
+| `intro` | Introductory paragraph under a section title |
 | `prose` | Insight posts and legal pages |
 | `section` | Page bands and the page title banner |
 

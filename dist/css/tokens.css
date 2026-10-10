@@ -96,6 +96,8 @@
   --color-action-secondary-background: var(--color-white);
   --color-action-secondary-foreground: var(--color-navy-900);
   --color-action-secondary-border: var(--color-navy-900);
+  --color-action-inverse-background: var(--color-white);
+  --color-action-inverse-foreground: var(--color-navy-900);
   --color-feedback-danger-background: var(--color-red-100);
   --color-feedback-danger-foreground: var(--color-red-500);
   --color-feedback-success-background: var(--color-green-100);
@@ -138,6 +140,7 @@
   --typography-heading-md: var(--font-weight-bold) var(--font-size-2xl)/var(--font-line-height-tight) var(--font-family-sans);
   --typography-heading-sm: var(--font-weight-bold) var(--font-size-xl)/var(--font-line-height-tight) var(--font-family-sans);
   --typography-display: var(--font-weight-medium) var(--font-size-3xl)/var(--font-line-height-tight) var(--font-family-sans); /** Section titles on marketing pages. */
+  --typography-intro: var(--font-weight-regular) var(--font-size-md)/var(--font-line-height-normal) var(--font-family-sans); /** Introductory paragraph under a section title. */
   --typography-title-lg: var(--font-weight-semibold) var(--font-size-2xl)/var(--font-line-height-normal) var(--font-family-sans);
   --typography-title-md: var(--font-weight-semibold) var(--font-size-xl)/var(--font-line-height-normal) var(--font-family-sans);
   --typography-body-lg: var(--font-weight-regular) var(--font-size-2xl)/var(--font-line-height-normal) var(--font-family-sans); /** Lead paragraphs. */
@@ -202,6 +205,10 @@
   --card-title-color: var(--color-text-brand);
   --card-body-typography: var(--typography-body-md);
   --card-body-color: var(--color-text-subtle);
+  --cta-background: var(--color-action-primary-background);
+  --cta-foreground: var(--color-action-primary-foreground);
+  --cta-inverse-background: var(--color-action-inverse-background);
+  --cta-inverse-foreground: var(--color-action-inverse-foreground);
   --footer-background: var(--color-background-inverse);
   --footer-foreground: var(--color-text-inverse);
   --footer-typography: var(--typography-body-sm);
@@ -246,6 +253,10 @@
   --input-padding-block: var(--space-inset-sm);
   --input-padding-inline: var(--space-inset-md);
   --input-typography: var(--typography-label);
+  --intro-typography: var(--typography-intro);
+  --intro-color: var(--color-text-subtle);
+  --intro-max-width: var(--size-measure-text);
+  --intro-margin-block-start: var(--space-gap-default); /** Between the section title and the intro. */
   --modal-background: var(--color-background-subtle);
   --modal-overlay: var(--color-background-overlay);
   --modal-radius: var(--radius-card);
