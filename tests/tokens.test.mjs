@@ -67,6 +67,22 @@ describe("tokens.css build", () => {
     );
   });
 
+  it("sets the intro in body type, subtle and text-width", () => {
+    assert.equal(
+      resolve(props.get("--intro-typography"), props),
+      "400 1rem/1.5 Cabin, Calibri, 'Trebuchet MS', sans-serif",
+    );
+    assert.equal(
+      resolve(props.get("--intro-color"), props),
+      resolve(props.get("--color-text-subtle"), props),
+    );
+    assert.equal(resolve(props.get("--intro-max-width"), props), "768px");
+    assert.equal(
+      resolve(props.get("--intro-margin-block-start"), props),
+      "1rem",
+    );
+  });
+
   it("outputs space.gutter.page's CSS escape, not a var() to its $value", () => {
     assert.equal(
       props.get("--space-gutter-page"),

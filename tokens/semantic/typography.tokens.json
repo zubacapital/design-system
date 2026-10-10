@@ -45,6 +45,15 @@
       },
       "$description": "Section titles on marketing pages."
     },
+    "intro": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.md}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.normal}"
+      },
+      "$description": "Introductory paragraph under a section title."
+    },
     "title": {
       "$description": "Titles of cards and callouts.",
       "lg": {

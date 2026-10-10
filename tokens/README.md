@@ -32,6 +32,7 @@ Design tokens for the Zuba website, in the [Design Tokens Format Module 2025.10]
 | `hero` | Home hero panel |
 | `icon-tile` | Benefit icons, social links |
 | `input`, `modal`, `notification` | Contact, sign-up and subscription dialogs |
+| `intro` | Introductory paragraph under a section title |
 | `prose` | Insight posts and legal pages |
 | `section` | Page bands and the page title banner |
 

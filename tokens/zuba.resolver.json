@@ -38,6 +38,7 @@
         { "$ref": "component/hero.tokens.json" },
         { "$ref": "component/icon-tile.tokens.json" },
         { "$ref": "component/input.tokens.json" },
+        { "$ref": "component/intro.tokens.json" },
         { "$ref": "component/modal.tokens.json" },
         { "$ref": "component/notification.tokens.json" },
         { "$ref": "component/prose.tokens.json" },
