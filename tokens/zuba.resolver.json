@@ -32,6 +32,7 @@
         { "$ref": "component/button.tokens.json" },
         { "$ref": "component/callout.tokens.json" },
         { "$ref": "component/card.tokens.json" },
+        { "$ref": "component/cta.tokens.json" },
         { "$ref": "component/footer.tokens.json" },
         { "$ref": "component/header.tokens.json" },
         { "$ref": "component/hero.tokens.json" },

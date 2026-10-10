@@ -48,6 +48,25 @@ describe("tokens.css build", () => {
     );
   });
 
+  it("gives the cta navy on light surfaces and white on dark ones", () => {
+    assert.equal(
+      resolve(props.get("--cta-background"), props),
+      "rgb(16 43 56)",
+    );
+    assert.equal(
+      resolve(props.get("--cta-foreground"), props),
+      "rgb(255 255 255)",
+    );
+    assert.equal(
+      resolve(props.get("--cta-inverse-background"), props),
+      "rgb(255 255 255)",
+    );
+    assert.equal(
+      resolve(props.get("--cta-inverse-foreground"), props),
+      "rgb(16 43 56)",
+    );
+  });
+
   it("outputs space.gutter.page's CSS escape, not a var() to its $value", () => {
     assert.equal(
       props.get("--space-gutter-page"),

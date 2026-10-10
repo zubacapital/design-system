@@ -66,6 +66,11 @@
         "background": { "$value": "{color.white}" },
         "foreground": { "$value": "{color.navy.900}" },
         "border": { "$value": "{color.navy.900}" }
+      },
+      "inverse": {
+        "$description": "Actions on background.inverse.",
+        "background": { "$value": "{color.white}" },
+        "foreground": { "$value": "{color.navy.900}" }
       }
     },
     "feedback": {

@@ -1,0 +1,11 @@
+{
+  "cta": {
+    "$description": "The page's main call to action (`.cta`: 'Join Zuba', 'Subscribe'), as a button or a link. Its size comes from where it sits (`button.size.lg` in page content, `header.nav` in the header); these tokens set its colors. The default pair is for light surfaces, `inverse` for background.inverse.",
+    "background": { "$value": "{color.action.primary.background}" },
+    "foreground": { "$value": "{color.action.primary.foreground}" },
+    "inverse": {
+      "background": { "$value": "{color.action.inverse.background}" },
+      "foreground": { "$value": "{color.action.inverse.foreground}" }
+    }
+  }
+}

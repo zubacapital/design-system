@@ -96,6 +96,8 @@
   --color-action-secondary-background: var(--color-white);
   --color-action-secondary-foreground: var(--color-navy-900);
   --color-action-secondary-border: var(--color-navy-900);
+  --color-action-inverse-background: var(--color-white);
+  --color-action-inverse-foreground: var(--color-navy-900);
   --color-feedback-danger-background: var(--color-red-100);
   --color-feedback-danger-foreground: var(--color-red-500);
   --color-feedback-success-background: var(--color-green-100);
@@ -202,6 +204,10 @@
   --card-title-color: var(--color-text-brand);
   --card-body-typography: var(--typography-body-md);
   --card-body-color: var(--color-text-subtle);
+  --cta-background: var(--color-action-primary-background);
+  --cta-foreground: var(--color-action-primary-foreground);
+  --cta-inverse-background: var(--color-action-inverse-background);
+  --cta-inverse-foreground: var(--color-action-inverse-foreground);
   --footer-background: var(--color-background-inverse);
   --footer-foreground: var(--color-text-inverse);
   --footer-typography: var(--typography-body-sm);
