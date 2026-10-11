@@ -104,5 +104,7 @@ A few of those resolutions are worth knowing before changing a token:
   above).
 * `shadow`/`elevation` and a few unreferenced primitives (`font.size.lg`,
   `font.size.5xl`, `z-index.base`) were deleted outright — nothing used them.
+  `font.size.lg` (1.125rem) and `font.size.5xl` (3.5rem) have since returned:
+  the app's fluid headings use them as range ends.
 * `input.background`/`input.foreground` were dropped (no input sets either).
   `prose.h3.color` was kept and is now actually applied in `post.css`.
