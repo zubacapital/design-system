@@ -48,6 +48,11 @@ describe("tokens.css build", () => {
     );
   });
 
+  it("fills the font size scale's lg and 5xl steps for fluid type ranges", () => {
+    assert.equal(props.get("--font-size-lg"), "1.125rem");
+    assert.equal(props.get("--font-size-5xl"), "3.5rem");
+  });
+
   it("gives the cta navy on light surfaces and white on dark ones", () => {
     assert.equal(
       resolve(props.get("--cta-background"), props),
@@ -129,8 +134,6 @@ describe("audit.md recommendation 1-2: dead tokens deleted", () => {
     "--elevation-low",
     "--elevation-medium",
     "--elevation-high",
-    "--font-size-lg",
-    "--font-size-5xl",
     "--z-index-base",
   ]) {
     it(`${name} no longer exists`, () => {
